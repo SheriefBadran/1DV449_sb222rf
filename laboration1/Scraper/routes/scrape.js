@@ -14,31 +14,22 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 
-    // moved
-
     var url = 'http://coursepress.lnu.se/kurser/?bpage=1';
     scrapePage(url);
 
 });
 
+var json = {};
 function scrapePage (url) {
-
 
     request(url, function(error, response, html) {
 
         var data, courseName, courseUrl, urlQueryStringObject, urlQueryString;
 
-        var json = {
-            courseName: "",
-            courseUrl: "",
-            preamble: ""
-        };
 
         if (!error) {
 
             var $ = cheerio.load(html);
-            var urlParts = url.split("?");
-            url = urlParts[0];
 
             $('.item-list li .item-title a').filter(function () {
 
@@ -47,15 +38,40 @@ function scrapePage (url) {
                 courseName = data.html();
                 courseUrl = data.attr('href');
 
-                json.courseName = courseName;
-                json.courseUrl = courseUrl;
-                console.log('courseName: ' + courseName);
-                // console.log('courseUrls: ' + courseUrl);
-                // console.log(json);
+                //console.log('courseName: ' + courseName);
 
-                //var makeCourseRequest = getCoursePreamble(courseUrl);
-                //json.preamble = makeCourseRequest();
-                //console.log(json.preamble);
+                scrapeCoursePage(courseUrl);
+                function scrapeCoursePage (courseUrl) {
+
+                    var courseName, courseCode, navSection, courseCurriculum;
+                    request(courseUrl, function(error, response, html) {
+
+                        if (!error) {
+
+                            $ = cheerio.load(html);
+                            courseName = $('#header-wrapper h1 a').text();
+                            courseCode = $('#header-wrapper ul li a').last().text();
+                            navSection = $('#navigation section #menu-main-nav-menu').html();
+                            //console.log(navSection);
+
+                            json[courseName] = {};
+
+                            json[courseName].code = courseCode;
+                            json[courseName].name = courseName;
+                            json[courseName].url = courseUrl;
+
+                            $('section .menu-item a').filter(function(){
+
+                                var data = $(this);
+                                if(data.text().match('Kursplan')) {
+
+                                    var courseCurriculumLink = data.attr('href');
+                                    console.log(courseCurriculumLink);
+                                }
+                            });
+                        }
+                    });
+                }
             });
 
             urlQueryStringObject = $('#pag-top .next');
@@ -65,7 +81,6 @@ function scrapePage (url) {
 
 
             if (urlQueryStringObject.length > 0) {
-
 
                 repeatPageScrape(url);
             }
@@ -78,27 +93,6 @@ function repeatPageScrape (url) {
 
     scrapePage(url);
 }
-
-//function getCoursePreamble (url) {
-//
-//    function makeRequest () {
-//
-//        request(url, function(error, response, html) {
-//
-//            // Handle different cases dependeing on the last split of url.
-//            console.log(url);
-//            if (!error) {
-//
-//                var $ = cheerio.load(html);
-//                var preambleSelector = $('.entry-content p').text();
-//            }
-//        });
-//
-//        return preambleSelector;
-//    }
-//
-//    return makeRequest;
-//}
 
 
 
