@@ -3,8 +3,8 @@
  */
 var express = require('express');
 var request = require('request');
-var request = require('request');
 var cheerio = require('cheerio');
+var fs = require('fs');
 var app = express();
 
 var router = express.Router();
@@ -14,12 +14,46 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 
-    var url = 'http://coursepress.lnu.se/kurser/?bpage=1';
-    scrapePage(url);
 
+    var url = 'http://coursepress.lnu.se/kurser/?bpage=1';
+
+
+
+    fs.readFile('lnu.json', function (err, data) {
+
+        if (!data) {
+
+            scrapePage(url);
+            return;
+        }
+
+        var date = new Date().getTime();
+        var content = JSON.parse(data);
+        if (date - content.timeStamp > 20000) {
+
+            console.log('omskrapning');
+            scrapePage(url);
+        }
+        else {
+
+            console.log('not rescrape');
+        }
+    });
 });
 
+var date = new Date();
+var year = date.getFullYear();
+var month = date.getMonth() + 1;
+var day = date.getDate();
+var hour = date.getMinutes();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+
+var scrapeDate = year+'-'+month+'-'+day+' '+hour+':'+minutes;
+
 var json = {};
+json.scrapeDate = scrapeDate;
+
 function scrapePage (url) {
 
     request(url, function(error, response, html) {
@@ -43,7 +77,8 @@ function scrapePage (url) {
                 scrapeCoursePage(courseUrl);
                 function scrapeCoursePage (courseUrl) {
 
-                    var courseName, courseCode, navSection, courseCurriculum;
+                    var courseName, courseCode, navSection, preamble, latestPost, latestPostDate, latestPostAuthor;
+
                     request(courseUrl, function(error, response, html) {
 
                         if (!error) {
@@ -65,10 +100,42 @@ function scrapePage (url) {
                                 var data = $(this);
                                 if(data.text().match('Kursplan')) {
 
-                                    var courseCurriculumLink = data.attr('href');
-                                    console.log(courseCurriculumLink);
+                                    var courseCurriculumUrl = data.attr('href');
+                                    //console.log(courseCurriculumUrl);
+                                    json[courseName].curriculumUrl = courseCurriculumUrl;
                                 }
                             });
+
+                            preamble = $('.entry-content p').text();
+                            json[courseName].preamble = preamble;
+
+                            latestPost = $('#latest-post').parent().next().html();
+                            var latestPostTitle = $('.entry-header .entry-title').text();
+                            var latestPostAuthor = $('.entry-header .entry-byline strong').first().text();
+                            var latestPostText = $('.entry-header .entry-byline').first().text();
+
+                            var result = latestPostText.match(/(\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2})/);
+
+                            if (result === null) {
+
+                                latestPostDate = 'no data';
+                            }
+                            else {
+
+                                latestPostDate = result[0];
+                            }
+
+                            latestPostAuthor = checkData(latestPostAuthor);
+
+                            json[courseName].latestPost = {
+
+                                title: latestPostTitle,
+                                author: latestPostAuthor,
+                                date: latestPostDate
+                            };
+
+                            var timestamp = new Date().getTime();
+                            json.timeStamp = timestamp;
                         }
                     });
                 }
@@ -84,6 +151,17 @@ function scrapePage (url) {
 
                 repeatPageScrape(url);
             }
+            else {
+
+
+                fs.writeFile('lnu.json', JSON.stringify(json, null, 4), function(err){
+
+                    if(!err) {
+
+                        console.log('SUCCESS');
+                    }
+                });
+            }
         }
     });
 }
@@ -94,6 +172,14 @@ function repeatPageScrape (url) {
     scrapePage(url);
 }
 
+function checkData (string) {
 
+    if (string === '') {
+
+        string = 'no data';
+    }
+
+    return string;
+}
 
 module.exports = router;
