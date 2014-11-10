@@ -14,10 +14,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
 
-
     var url = 'http://coursepress.lnu.se/kurser/?bpage=1';
-
-
 
     fs.readFile('lnu.json', function (err, data) {
 
@@ -52,6 +49,7 @@ var seconds = date.getSeconds();
 var scrapeDate = year+'-'+month+'-'+day+' '+hour+':'+minutes;
 
 var json = {};
+var hrefCount = 0;
 json.scrapeDate = scrapeDate;
 
 function scrapePage (url) {
@@ -73,13 +71,26 @@ function scrapePage (url) {
                 courseUrl = data.attr('href');
 
                 //console.log('courseName: ' + courseName);
+                if (courseUrl.split('/')[3] === "kurs") {
 
-                scrapeCoursePage(courseUrl);
+                    scrapeCoursePage(courseUrl);
+                }
+
                 function scrapeCoursePage (courseUrl) {
 
-                    var courseName, courseCode, navSection, preamble, latestPost, latestPostDate, latestPostAuthor;
+                    console.log(courseUrl);
+                    var courseName, courseCode, navSection, preamble, latestPost, latestPostDate;
 
-                    request(courseUrl, function(error, response, html) {
+                    var requestObj = {
+                        url: courseUrl,
+                        headers: {
+                            'User-Agent': 'Sherief Badran'
+                        }
+                    };
+
+                    hrefCount++;
+
+                    request(requestObj, function(error, response, html) {
 
                         if (!error) {
 
@@ -153,14 +164,28 @@ function scrapePage (url) {
             }
             else {
 
+                json.count = Object.keys(json).length;
 
-                fs.writeFile('lnu.json', JSON.stringify(json, null, 4), function(err){
+                var interval = setInterval(writeToFile, 3000);
+                function writeToFile () {
 
-                    if(!err) {
+                    console.log(json.count);
+                    console.log(hrefCount);
+                    console.log(Object.keys(json).length);
 
-                        console.log('SUCCESS');
+                    if (hrefCount !== Object.keys(json).length - 2) {
+
+                        return;
                     }
-                });
+
+                    fs.writeFile('lnu.json', JSON.stringify(json, null, 4), function(err){
+
+                        if(!err) {
+                            console.log('SUCCESS');
+                        }
+                    });
+                    clearInterval(interval);
+                }
             }
         }
     });
@@ -183,3 +208,4 @@ function checkData (string) {
 }
 
 module.exports = router;
+
