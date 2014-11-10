@@ -18,9 +18,15 @@ router.get('/', function(req, res) {
 
     fs.readFile('lnu.json', function (err, data) {
 
+        // This method will be sent as a callback.
+        var printToBrowser = function (data) {
+
+            res.write(data);
+        };
+
         if (!data) {
 
-            scrapePage(url);
+            scrapePage(url, printToBrowser);
             return;
         }
 
@@ -29,11 +35,12 @@ router.get('/', function(req, res) {
         if (date - content.timeStamp > 20000) {
 
             console.log('omskrapning');
-            scrapePage(url);
+            scrapePage(url, printToBrowser);
         }
         else {
 
             console.log('not rescrape');
+            res.write(data);
         }
     });
 });
@@ -52,7 +59,7 @@ var json = {};
 var hrefCount = 0;
 json.scrapeDate = scrapeDate;
 
-function scrapePage (url) {
+function scrapePage (url, callback) {
 
     request(url, function(error, response, html) {
 
@@ -148,6 +155,8 @@ function scrapePage (url) {
                             var timestamp = new Date().getTime();
                             json.timeStamp = timestamp;
                         }
+
+
                     });
                 }
             });
@@ -160,7 +169,7 @@ function scrapePage (url) {
 
             if (urlQueryStringObject.length > 0) {
 
-                repeatPageScrape(url);
+                scrapePage(url, callback);
             }
             else {
 
@@ -178,9 +187,13 @@ function scrapePage (url) {
                         return;
                     }
 
-                    fs.writeFile('lnu.json', JSON.stringify(json, null, 4), function(err){
+                    var jsonString = JSON.stringify(json, null, 4);
+
+                    fs.writeFile('lnu.json', jsonString, function(err){
 
                         if(!err) {
+
+                            callback(jsonString);
                             console.log('SUCCESS');
                         }
                     });
@@ -191,11 +204,6 @@ function scrapePage (url) {
     });
 }
 
-function repeatPageScrape (url) {
-
-
-    scrapePage(url);
-}
 
 function checkData (string) {
 

@@ -1,18 +1,5 @@
 {
-    "scrapeDate": "2014-11-10 14:14",
-    "Avancerade LAN-teknologier": {
-        "code": "1DV447",
-        "name": "Avancerade LAN-teknologier",
-        "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV447&documenttype=pdf&lang=sv",
-        "preamble": "Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104.Kursen är en fördjupning inom virtuella lokala nätverk, loopfria nätverk och redundans. I första halvan av kursen kommer fokus främst ligga på teori och under andra halvan på praktiskt arbete även om laborationshandledning kommer förekomma kontinuerligt under hela kursen. Kursen har fyra examinerande moment (seminarium, tentamen, projekt och laboration) så det är många examinationer att förbereda sig för utspridda över hela kurstiden. För att bli godkänd på kursen är tanken att man självständigt ska kunna designa och konfigurera ett flerlagerswitchat nätverk.Eftersom tillfället på fredag är det första examinerande momentet kommer detta också användas för att få reda på vilka som tänker gå kursen. Är du inte där på fredag kommer jag tolka det som att du inte tänker fullfölja kursen. Om du inte kan närvara på fredag, men ändå vill fortsätta, måste du kontakta mig innan fredag.Jag ser gärna att ni/vi för en kontinuerlig dialog under kursen, förslagsvis i grupp-forumet för kursen (https://coursepress.lnu.se/grupper/avancerade-lan-teknologier-ht14/forum/). Jag kommer hålla ett öga på forumet så vill ni ha en öppen dialog med mig – go for it. Det kan säkert dyka upp spännande frågor under kursen så som “vad är skillnanden mellan ett SVI och en L3-port?” eller “vad är ett unknown unicast?”. Utmärkta saker att diskutera på forumet. Jag är säker på att det finns fler smarta frågor som bara väntar på att ställas …",
-        "latestPost": {
-            "title": "Fredagens “redovisning”En levande diskussion",
-            "author": "Thomas Ivarsson",
-            "date": "2014-11-10 12:34"
-        }
-    },
-    "timeStamp": 1415632534617,
+    "scrapeDate": "2014-11-10 18:18",
     "Grundläggande spelprogrammering": {
         "code": "1DV437",
         "name": "Grundläggande spelprogrammering",
@@ -25,18 +12,7 @@
             "date": "2014-11-10 01:27"
         }
     },
-    "Webbteknik II": {
-        "code": "1DV449",
-        "name": "Webbteknik II",
-        "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
-        "curriculumUrl": "http://coursepress.lnu.se/kurs/webbteknik-ii/kursplanering/",
-        "preamble": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.Du bör nu fått ett e-postmeddelande till den adress du angav på quiz-formuläret med ditt resultat.Jag har nu lagt upp lite nya länkar under Steg 1.Glöm inte göra Quizen senast söndag. Den bör vara hyfsat snabbt gjort ifall man hängde med på peer-instructionspasset. Först quizen är nu utlagd och bör inte vara några problem för er som hängde med på gårdagens peer-instruction. Det är ett vanligt googleformulär som ska fyllas i (man kan bara fylla i det en gång och det kräver inloggning via er google mejl). Senast söndag vill jag ha era svar. Annars får jag önska en trevlig helg!Då har vi haft första passet som använder peer-instruction. Jag tycker att det fungerade riktigt bra. Kanske blev det lite långt. Jag behöver fundera lite kring hur man formulerar vissa frågor och i vissa fall bör man köra lite längre tid till både första och andra “röstningen”. Sist hade jag ju en fråga kring hur ni upplevde passet och resultatet av denna blev:Det verkar som ni gillar konceptet och vi kommer alltså fortsätta köra det genom kursen. Kul tycker jag!Vad som nu gäller är att jag så fort jag hinner ska publicera inspelningen av passet, skapa en Quiz, gå igenom era förkunskap samt lägga ut nästa veckas studiematerial. Quizen hoppas jag kunna ha klar till torsdag lunch och det kommer finnas instruktioner om hur den går till. Den kommer i mångt och mycket bygga på detta pass vi körde.",
-        "latestPost": {
-            "title": "Quiz-reultatBoka redovisningstid m.m.Quiz utlagdFörsta peer-instruction genomförd!",
-            "author": "John Häggerud",
-            "date": "2014-11-10 10:03"
-        }
-    },
+    "timeStamp": 1415636341822,
     "Mjukvarutestning (Software Testing)": {
         "code": "2DV110",
         "name": "Mjukvarutestning (Software Testing)",
@@ -47,6 +23,30 @@
             "title": "TravellingRegistration on the courseLecture renderedWelcome to the course",
             "author": "Daniel Toll",
             "date": "2014-11-10 01:27"
+        }
+    },
+    "Klientbaserad webbutveckling": {
+        "code": "1DV435",
+        "name": "Klientbaserad webbutveckling",
+        "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV435&documenttype=pdf&lang=sv",
+        "preamble": "I denna kurs kommer fokus ligga på teknik och praktik kring byggandet av webbplatser med fokus på klientbaserad webbutveckling. Kursen fokuserar dels på modern utveckling med HTML5 och CSS samt även på grundläggande programmering med JavaScript som programmeringsspråk. Kursen avslutas med ett större projekt där dessa tekniker används.Imorgon kör vi handledningspass. 0815-1000 är det för distansstudenter (vi möts upp i virtuella handledningsrummet) och 1015-1200 är det i sal ny109 för Campusstudenter. Handledningen är frivillig men det är en chans att få svar på eventuella frågor kring laborationen innan själva redovisningen som är på fredag.Jag har fått några frågor hur handledning och redovisning går till så jag ska försöka reda ut det här.Campusstudenter:Ni går till den datorsalen som finns angiven i schemat. Där skriver man upp sig på tavlan om man vill ha hjälp eller om man vill redovisa. Emil och jag kommer då gå runt i tur och ordning till era datorer där vi tillsammans tittar på problemet eller redovisningen. Det kan alltså uppstå viss kö och man får vara beredd på att vänta lite. Kommer man in sent på passet kommer det finnas risk att man inte hinner ställa sin fråga eller redovisa.Distansstudenter:På handledningen eller redovisningen loggar ni in i det specifika handledningsrummet https://connect.sunet.se/r6gj7aew7nx/. Det är alltså INTE samma som föreläsningsrummet. Väl där kan man skriva upp sig på en lista med namn och Skype-id så ringer Emil och jag upp er i tur och ordning på Skype. Väl där kan ni dela skärm och vi kan tillsammans gå igenom koden. Som distansstudent anmäler man sig också till en av de två grupper som finns för att dela upp tiden lite.Nu finns kursintroduktionen inspelad och utlagd. Själva inspelningen kom visst igång efter ett par minuter men det var bara en enklare presentation ni missade så det var ingen fara.Idag startar kursen med en kursintroduktion i sal ny105 klockan 13:15. Föreläsningen strömmas också live i virtuella klassrummet: https://connect.sunet.se/r4z0auhlgz8/Välkomna!",
+        "latestPost": {
+            "title": "Ytterligare förtydlingHur går handledning och redovisning tillInspelning av kursintroduktionIdag startar kursen!",
+            "author": "John Häggerud",
+            "date": "2014-11-10 04:29"
+        }
+    },
+    "Webbteknik II": {
+        "code": "1DV449",
+        "name": "Webbteknik II",
+        "url": "http://coursepress.lnu.se/kurs/webbteknik-ii/",
+        "curriculumUrl": "http://coursepress.lnu.se/kurs/webbteknik-ii/kursplanering/",
+        "preamble": "Denna kurs fokuserar helt på webben. Kursen tar upp webbens historia, utveckling och betydelse för samhället, problem inom forskningen kring webben (Web Science). Kursen tar också upp optimering och säkerhet i webbapplikationer. Stort fokus kommer att ligga i att kunna hantera öppna Webb-API:er för att sammanfoga data i så kallade mashup-applikationer.Du bör nu fått ett e-postmeddelande till den adress du angav på quiz-formuläret med ditt resultat.Jag har nu lagt upp lite nya länkar under Steg 1.Glöm inte göra Quizen senast söndag. Den bör vara hyfsat snabbt gjort ifall man hängde med på peer-instructionspasset. Först quizen är nu utlagd och bör inte vara några problem för er som hängde med på gårdagens peer-instruction. Det är ett vanligt googleformulär som ska fyllas i (man kan bara fylla i det en gång och det kräver inloggning via er google mejl). Senast söndag vill jag ha era svar. Annars får jag önska en trevlig helg!Då har vi haft första passet som använder peer-instruction. Jag tycker att det fungerade riktigt bra. Kanske blev det lite långt. Jag behöver fundera lite kring hur man formulerar vissa frågor och i vissa fall bör man köra lite längre tid till både första och andra “röstningen”. Sist hade jag ju en fråga kring hur ni upplevde passet och resultatet av denna blev:Det verkar som ni gillar konceptet och vi kommer alltså fortsätta köra det genom kursen. Kul tycker jag!Vad som nu gäller är att jag så fort jag hinner ska publicera inspelningen av passet, skapa en Quiz, gå igenom era förkunskap samt lägga ut nästa veckas studiematerial. Quizen hoppas jag kunna ha klar till torsdag lunch och det kommer finnas instruktioner om hur den går till. Den kommer i mångt och mycket bygga på detta pass vi körde.",
+        "latestPost": {
+            "title": "Quiz-reultatBoka redovisningstid m.m.Quiz utlagdFörsta peer-instruction genomförd!",
+            "author": "John Häggerud",
+            "date": "2014-11-10 10:03"
         }
     },
     "Strukturerad programmering med C++": {
@@ -72,28 +72,16 @@
             "date": "no data"
         }
     },
-    "Klientbaserad webbutveckling": {
-        "code": "1DV435",
-        "name": "Klientbaserad webbutveckling",
-        "url": "http://coursepress.lnu.se/kurs/klientbaserad-webbutveckling/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV435&documenttype=pdf&lang=sv",
-        "preamble": "I denna kurs kommer fokus ligga på teknik och praktik kring byggandet av webbplatser med fokus på klientbaserad webbutveckling. Kursen fokuserar dels på modern utveckling med HTML5 och CSS samt även på grundläggande programmering med JavaScript som programmeringsspråk. Kursen avslutas med ett större projekt där dessa tekniker används.Jag har fått några frågor hur handledning och redovisning går till så jag ska försöka reda ut det här.Campusstudenter:Ni går till den datorsalen som finns angiven i schemat. Där skriver man upp sig på tavlan om man vill ha hjälp eller om man vill redovisa. Emil och jag kommer då gå runt i tur och ordning till era datorer där vi tillsammans tittar på problemet eller redovisningen. Det kan alltså uppstå viss kö och man får vara beredd på att vänta lite. Kommer man in sent på passet kommer det finnas risk att man inte hinner ställa sin fråga eller redovisa.Distansstudenter:På handledningen eller redovisningen loggar ni in i det specifika handledningsrummet https://connect.sunet.se/r6gj7aew7nx/. Det är alltså INTE samma som föreläsningsrummet. Väl där kan man skriva upp sig på en lista med namn och Skype-id så ringer Emil och jag upp er i tur och ordning på Skype. Väl där kan ni dela skärm och vi kan tillsammans gå igenom koden. Som distansstudent anmäler man sig också till en av de två grupper som finns för att dela upp tiden lite.Nu finns kursintroduktionen inspelad och utlagd. Själva inspelningen kom visst igång efter ett par minuter men det var bara en enklare presentation ni missade så det var ingen fara.Idag startar kursen med en kursintroduktion i sal ny105 klockan 13:15. Föreläsningen strömmas också live i virtuella klassrummet: https://connect.sunet.se/r4z0auhlgz8/Välkomna!Denna kurswebbplats är under uppdatering",
+    "Avancerade LAN-teknologier": {
+        "code": "1DV447",
+        "name": "Avancerade LAN-teknologier",
+        "url": "http://coursepress.lnu.se/kurs/avancerade-lan-teknologier/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV447&documenttype=pdf&lang=sv",
+        "preamble": "Årets upplaga, den kanske sista, av kursen drar igång den 4 november klockan 13:15 i Ny104.Kursen är en fördjupning inom virtuella lokala nätverk, loopfria nätverk och redundans. I första halvan av kursen kommer fokus främst ligga på teori och under andra halvan på praktiskt arbete även om laborationshandledning kommer förekomma kontinuerligt under hela kursen. Kursen har fyra examinerande moment (seminarium, tentamen, projekt och laboration) så det är många examinationer att förbereda sig för utspridda över hela kurstiden. För att bli godkänd på kursen är tanken att man självständigt ska kunna designa och konfigurera ett flerlagerswitchat nätverk.Eftersom tillfället på fredag är det första examinerande momentet kommer detta också användas för att få reda på vilka som tänker gå kursen. Är du inte där på fredag kommer jag tolka det som att du inte tänker fullfölja kursen. Om du inte kan närvara på fredag, men ändå vill fortsätta, måste du kontakta mig innan fredag.Jag ser gärna att ni/vi för en kontinuerlig dialog under kursen, förslagsvis i grupp-forumet för kursen (https://coursepress.lnu.se/grupper/avancerade-lan-teknologier-ht14/forum/). Jag kommer hålla ett öga på forumet så vill ni ha en öppen dialog med mig – go for it. Det kan säkert dyka upp spännande frågor under kursen så som “vad är skillnanden mellan ett SVI och en L3-port?” eller “vad är ett unknown unicast?”. Utmärkta saker att diskutera på forumet. Jag är säker på att det finns fler smarta frågor som bara väntar på att ställas …",
         "latestPost": {
-            "title": "Hur går handledning och redovisning tillInspelning av kursintroduktionIdag startar kursen!Under uppdatering",
-            "author": "John Häggerud",
-            "date": "2014-11-06 01:37"
-        }
-    },
-    "Webbteknik I": {
-        "code": "1DV403",
-        "name": "Webbteknik I",
-        "url": "http://coursepress.lnu.se/kurs/webbteknik-i/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV403&documenttype=pdf&lang=sv",
-        "preamble": "Kursen Webbteknik I är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans.En av de senaste årens webbtrender är att fler och fler applikationen flyttar från den lokala datorn till webben vilket innebär att användandet och betydelsen av Javascript ökar. Detta ställer högre krav på webbutvecklaren i form av disciplin och kunnande.Kursen behandlar Javascript från grunden och tar dig från ”Hello World” till att skapa en fullfjädrad Javascriptapplikation i form av ett webbbaserat fönsterhanteringssystem med Ajax. Genomgående lär du dig ett modernt arbetssätt och betydelsen av att skapa tillgängliga och säkra applikationer. I slutprojektet har du möjlighet att förkovra dig i ett javascript bibliotek så som exempelvis jQuery, men kursens mål är att lära sig JavaScript från grunden.På denna webbplats hittar du all information kring kursen. Är du student på kursen bör du logga in för att få tillgång till gruppindelningar, forum etc.Är du här som besökare kan du följa med i kursen genom att följa materialet på denna webbplats. Föreläsningar publiceras i takt med att de genomförs på campus i Kalmar.Introduktionsföreläsningen finns publicerad under “Kursintroduktion” sedan förra veckan men jag lägger den här också för säkerhets skull.HejJag vill med detta förbereda er för kursen som börjar v45. Kursen följer på Webbteknisk Introduktion men kräver även kunskaper motsvarande 1DV402, Inledande programmering med C#. En avstämning kommer att göras med Mats för att se vilka som har följt stora delar av kursen och de som inte uppfyller kraven kommer att kontaktas med information om hur vi går vidare. Vissa kan t.ex. komplettera upp vissa delar av kursen för att räknas som behöriga.Med start nästa vecka kan ni registrera er på kursen via http://lnu.se/studentNi kan redan nu beställa kurslitteraturen till kursen. Jag rekommenderar i första hand Zakas även Flanagan duger även den.Jag kommer tyvärr att vara bortrest på konferens första kursveckan och därför kommer denna första vecka att ägnas åt självstudier. Jag kommer dock att publicera en välkomstfilm här. Börja med att titta på den så kommer jag i den att förklara kursupplägg och hur studierna ska bedrivas tills dess att jag är tillbaka. Introduktionsfilmen publiceras senast måndag v45.Observera att överstrukna länkar ännu inte är uppdaterade inför HT2014. De förändringar jag planerar göra i år är:Innehållet uppdateras för kursstart 3/11. /Johan",
-        "latestPost": {
-            "title": "Missa inte introduktionsföreläsningenVälkomna till kursstart!Innehållet uppdateras",
-            "author": "Johan Leitet",
-            "date": "2014-11-04 03:54"
+            "title": "Fredagens “redovisning”En levande diskussion",
+            "author": "Thomas Ivarsson",
+            "date": "2014-11-10 12:34"
         }
     },
     "Iterativ mjukvaruutveckling": {
@@ -106,6 +94,18 @@
             "title": "Laboration 1 tillgängligAng: Föreläsning 1",
             "author": "Jesper Andersson",
             "date": "2014-11-07 03:20"
+        }
+    },
+    "Webbteknik I": {
+        "code": "1DV403",
+        "name": "Webbteknik I",
+        "url": "http://coursepress.lnu.se/kurs/webbteknik-i/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV403&documenttype=pdf&lang=sv",
+        "preamble": "Kursen Webbteknik I är en kurs som inom ramen för programmen ”Webbprogrammerare” och ”Utvecklare av digitala tjänster” vid Linnéuniversitetet i Kalmar och genomförs på campus såväl som distans.En av de senaste årens webbtrender är att fler och fler applikationen flyttar från den lokala datorn till webben vilket innebär att användandet och betydelsen av Javascript ökar. Detta ställer högre krav på webbutvecklaren i form av disciplin och kunnande.Kursen behandlar Javascript från grunden och tar dig från ”Hello World” till att skapa en fullfjädrad Javascriptapplikation i form av ett webbbaserat fönsterhanteringssystem med Ajax. Genomgående lär du dig ett modernt arbetssätt och betydelsen av att skapa tillgängliga och säkra applikationer. I slutprojektet har du möjlighet att förkovra dig i ett javascript bibliotek så som exempelvis jQuery, men kursens mål är att lära sig JavaScript från grunden.På denna webbplats hittar du all information kring kursen. Är du student på kursen bör du logga in för att få tillgång till gruppindelningar, forum etc.Är du här som besökare kan du följa med i kursen genom att följa materialet på denna webbplats. Föreläsningar publiceras i takt med att de genomförs på campus i Kalmar.Introduktionsföreläsningen finns publicerad under “Kursintroduktion” sedan förra veckan men jag lägger den här också för säkerhets skull.HejJag vill med detta förbereda er för kursen som börjar v45. Kursen följer på Webbteknisk Introduktion men kräver även kunskaper motsvarande 1DV402, Inledande programmering med C#. En avstämning kommer att göras med Mats för att se vilka som har följt stora delar av kursen och de som inte uppfyller kraven kommer att kontaktas med information om hur vi går vidare. Vissa kan t.ex. komplettera upp vissa delar av kursen för att räknas som behöriga.Med start nästa vecka kan ni registrera er på kursen via http://lnu.se/studentNi kan redan nu beställa kurslitteraturen till kursen. Jag rekommenderar i första hand Zakas även Flanagan duger även den.Jag kommer tyvärr att vara bortrest på konferens första kursveckan och därför kommer denna första vecka att ägnas åt självstudier. Jag kommer dock att publicera en välkomstfilm här. Börja med att titta på den så kommer jag i den att förklara kursupplägg och hur studierna ska bedrivas tills dess att jag är tillbaka. Introduktionsfilmen publiceras senast måndag v45.Observera att överstrukna länkar ännu inte är uppdaterade inför HT2014. De förändringar jag planerar göra i år är:Innehållet uppdateras för kursstart 3/11. /Johan",
+        "latestPost": {
+            "title": "Missa inte introduktionsföreläsningenVälkomna till kursstart!Innehållet uppdateras",
+            "author": "Johan Leitet",
+            "date": "2014-11-04 03:54"
         }
     },
     "Inledande programmering med C#": {
@@ -180,18 +180,6 @@
             "date": "2014-11-03 05:46"
         }
     },
-    "Webbutveckling med PHP": {
-        "code": "1DV408",
-        "name": "Webbutveckling med PHP",
-        "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV408&documenttype=pdf&lang=sv",
-        "preamble": "Kursen Webbutveckling med PHP, 7.5 Hp syftar till att ge er ett andra programmeringsspråk för serversidan. Den första delen handlar om språket PHP och hur objektorienterade applikationer kan skrivas med hjälp utav det. Men språkets grunder är bara början, kursen syftar också till att ge en djupare insikt i programmering… [läs mer...]HejNu har vi gått igenom era inlämningar, ni som lämnat in bör ha fått ett svar. Betyg kommer ni se i Ladok när det är införtTrevlig helg och tack!DanielJag har lagt till ett slutgiltigt deadlinetillfälle i Deadlines.Grymt kul att se allas projekt idag!Tack för all feedback!DanielHejDagens mellanrelease är en möjlighet att få feedback på sitt projekt. För att allt ska gå smidigt behöver vi kunna diskutera projektet krav, applikation och kod. Detta betyder att ni behöver ha tillgång till dessa under redovisningen. På distans kör vi via connect och Skype som vanligt, tillgång till fungerande headset och webbkamera är viktigt. Dyk in i Connect minst 15 minuter innan. Lägg till oss i Skype (Daniel: dntoll)Campusstudenter kommer upp till mig(kontoret) eller Emil(gästlärarrummet) fem minuter innan tiden.Vi har 15 minuter per student. Av erfarenhet vet vi att det kan vara svårt att hålla tidsschemat, jag och Emil kan också behöva korta pauser så var beredda på att vänta en stund.Så här tänker jag mig att det går till.Missar man sin tid så är det inte hela världen… Se då till att ordna feedback själva, gör en release och visa en kompis och diskutera vad som är bäst för projektet.HejHär finns formulär för bokning av mittrelease. (tänk på att inte ändra någon annans bokning)\nhttps://docs.google.com/spreadsheets/d/1YBsrlotZ39NOG_KrmZZvlL9gzZpV77sP11SErgCgxbQ/edit#gid=0Daniel",
-        "latestPost": {
-            "title": "Projekt rättade och betyg inlämnadeDeadlines updateradeMellanreleasenProjekt Mittrelease",
-            "author": "Daniel Toll",
-            "date": "2014-10-31 11:30"
-        }
-    },
     "Objektorienterad analys och design med UML": {
         "code": "1DV407",
         "name": "Objektorienterad analys och design med UML",
@@ -204,6 +192,18 @@
             "date": "2014-10-31 02:25"
         }
     },
+    "Webbutveckling med PHP": {
+        "code": "1DV408",
+        "name": "Webbutveckling med PHP",
+        "url": "http://coursepress.lnu.se/kurs/webbutveckling-med-php/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV408&documenttype=pdf&lang=sv",
+        "preamble": "Kursen Webbutveckling med PHP, 7.5 Hp syftar till att ge er ett andra programmeringsspråk för serversidan. Den första delen handlar om språket PHP och hur objektorienterade applikationer kan skrivas med hjälp utav det. Men språkets grunder är bara början, kursen syftar också till att ge en djupare insikt i programmering… [läs mer...]HejNu har vi gått igenom era inlämningar, ni som lämnat in bör ha fått ett svar. Betyg kommer ni se i Ladok när det är införtTrevlig helg och tack!DanielJag har lagt till ett slutgiltigt deadlinetillfälle i Deadlines.Grymt kul att se allas projekt idag!Tack för all feedback!DanielHejDagens mellanrelease är en möjlighet att få feedback på sitt projekt. För att allt ska gå smidigt behöver vi kunna diskutera projektet krav, applikation och kod. Detta betyder att ni behöver ha tillgång till dessa under redovisningen. På distans kör vi via connect och Skype som vanligt, tillgång till fungerande headset och webbkamera är viktigt. Dyk in i Connect minst 15 minuter innan. Lägg till oss i Skype (Daniel: dntoll)Campusstudenter kommer upp till mig(kontoret) eller Emil(gästlärarrummet) fem minuter innan tiden.Vi har 15 minuter per student. Av erfarenhet vet vi att det kan vara svårt att hålla tidsschemat, jag och Emil kan också behöva korta pauser så var beredda på att vänta en stund.Så här tänker jag mig att det går till.Missar man sin tid så är det inte hela världen… Se då till att ordna feedback själva, gör en release och visa en kompis och diskutera vad som är bäst för projektet.HejHär finns formulär för bokning av mittrelease. (tänk på att inte ändra någon annans bokning)\nhttps://docs.google.com/spreadsheets/d/1YBsrlotZ39NOG_KrmZZvlL9gzZpV77sP11SErgCgxbQ/edit#gid=0Daniel",
+        "latestPost": {
+            "title": "Projekt rättade och betyg inlämnadeDeadlines updateradeMellanreleasenProjekt Mittrelease",
+            "author": "Daniel Toll",
+            "date": "2014-10-31 11:30"
+        }
+    },
     "Ämnesintroduktion till interaktionsdesign": {
         "code": "1IK420",
         "name": "Ämnesintroduktion till interaktionsdesign",
@@ -214,6 +214,18 @@
             "title": "Kompletterad informationBokning av redovisning av individuellt arbeteHandledningLänk till enkäten",
             "author": "Morgan Rydbrink",
             "date": "2014-10-31 09:28"
+        }
+    },
+    "Grafiska verktyg": {
+        "code": "1ME402",
+        "name": "Grafiska verktyg",
+        "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1ME402&documenttype=pdf&lang=sv",
+        "preamble": "Välkommen till kursen!På sidan kursöversikt så hittar du en beskrivning av upplägg och innehåll för kursen.I kursforumet kan du få tips och ställa frågor.OBS! Kurssidan kommer att uppdateras inom kort inför kurstillfälle HT14 OBS!",
+        "latestPost": {
+            "title": "",
+            "author": "no data",
+            "date": "no data"
         }
     },
     "Databasteknik och administration av databas": {
@@ -240,16 +252,16 @@
             "date": "2014-10-15 01:45"
         }
     },
-    "Grafiska verktyg": {
-        "code": "1ME402",
-        "name": "Grafiska verktyg",
-        "url": "http://coursepress.lnu.se/kurs/grafiska-verktyg/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1ME402&documenttype=pdf&lang=sv",
-        "preamble": "Välkommen till kursen!På sidan kursöversikt så hittar du en beskrivning av upplägg och innehåll för kursen.I kursforumet kan du få tips och ställa frågor.OBS! Kurssidan kommer att uppdateras inom kort inför kurstillfälle HT14 OBS!",
+    "Nätverksprojekt": {
+        "code": "1DV420",
+        "name": "Nätverksprojekt",
+        "url": "http://coursepress.lnu.se/kurs/natverksprojekt/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&revision=2.000&code=1DV420&documenttype=pdf&lang=sv",
+        "preamble": "Kursen ger färdigheter i att kunna omsätta teori till verkliga projekt under utsatt tid. Kursen ska även ge praktiska och teoretiska kunskaper om vanliga roller i ett projekt, samt ge studenten kunskap att hantera den dokumentation som krävs i ett projekt. Kursen ger fördjupad teoretisk och praktisk kunskap i vissa av de moment som ingått i tidigare kurser som ges i programmet IT-­tekniker.Hej!Se rapporten som en självvärdering av ert arbete och i viss mån även som en kursutvärdering. Jag återkommer med en formell kursvärdering efter kursens genomförande.Här kommer några förtydliganden:* i uppgift 1 ska ni ge er syn dels på kursen, kursens förutsättningar och dess relevans för utbildningen, dels er förståelse av uppgiften i sig.* i uppgift 2 ska ni beskriva hur ni arbetat för att lösa uppgiften, försöka bedöma er lösning samt ge era tankar om hur projektet skulle kunna fortsätta.* uppgift 3 vill försöka fånga era erfarenheter av arbetet (arbetsfördelning, problem, +/-, etc)./MathiasHej!Några av er verkar fortfarande inte ha registrerat sig i någon grupp, se till att ni gör det omgående. Annars riskera ni att hamna utanför och deltar då inte i kursen.Hälsn.MathiasHej!Nu finns det möjlighet för er att registrera er i olika grupper via\r\n                    och det vore bra om ni gjorde det så snabbt som möjligt.Notera att Grupp 5 har bara plats för 5 medlemmar.Observera att ni måste var inloggad för att kunna registrera er i grupperna. Hör av er om det är några problem./MathiasHej!Följande reflektion gjordes efter genomförd kursvärdering.Hälsn Mathias",
         "latestPost": {
-            "title": "",
-            "author": "no data",
-            "date": "no data"
+            "title": "Förtydliganden av rapportuppgifterGruppindelningGruppregistreringFörra årets kursutvärdering",
+            "author": "Mathias Hedenborg",
+            "date": "2014-10-20 10:20"
         }
     },
     "Webbteknisk Introduktion": {
@@ -262,18 +274,6 @@
             "title": "RestredovisningspassRedovisningstiderInstruktioner för kursens sista momentVeckan som gått och veckan som kommer",
             "author": "Johan Leitet",
             "date": "2014-10-28 04:03"
-        }
-    },
-    "Nätverksprojekt": {
-        "code": "1DV420",
-        "name": "Nätverksprojekt",
-        "url": "http://coursepress.lnu.se/kurs/natverksprojekt/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&revision=2.000&code=1DV420&documenttype=pdf&lang=sv",
-        "preamble": "Kursen ger färdigheter i att kunna omsätta teori till verkliga projekt under utsatt tid. Kursen ska även ge praktiska och teoretiska kunskaper om vanliga roller i ett projekt, samt ge studenten kunskap att hantera den dokumentation som krävs i ett projekt. Kursen ger fördjupad teoretisk och praktisk kunskap i vissa av de moment som ingått i tidigare kurser som ges i programmet IT-­tekniker.Hej!Se rapporten som en självvärdering av ert arbete och i viss mån även som en kursutvärdering. Jag återkommer med en formell kursvärdering efter kursens genomförande.Här kommer några förtydliganden:* i uppgift 1 ska ni ge er syn dels på kursen, kursens förutsättningar och dess relevans för utbildningen, dels er förståelse av uppgiften i sig.* i uppgift 2 ska ni beskriva hur ni arbetat för att lösa uppgiften, försöka bedöma er lösning samt ge era tankar om hur projektet skulle kunna fortsätta.* uppgift 3 vill försöka fånga era erfarenheter av arbetet (arbetsfördelning, problem, +/-, etc)./MathiasHej!Några av er verkar fortfarande inte ha registrerat sig i någon grupp, se till att ni gör det omgående. Annars riskera ni att hamna utanför och deltar då inte i kursen.Hälsn.MathiasHej!Nu finns det möjlighet för er att registrera er i olika grupper via\r\n                    och det vore bra om ni gjorde det så snabbt som möjligt.Notera att Grupp 5 har bara plats för 5 medlemmar.Observera att ni måste var inloggad för att kunna registrera er i grupperna. Hör av er om det är några problem./MathiasHej!Följande reflektion gjordes efter genomförd kursvärdering.Hälsn Mathias",
-        "latestPost": {
-            "title": "Förtydliganden av rapportuppgifterGruppindelningGruppregistreringFörra årets kursutvärdering",
-            "author": "Mathias Hedenborg",
-            "date": "2014-10-20 10:20"
         }
     },
     "Servervirtualisering, tekniker": {
@@ -300,18 +300,6 @@
             "date": "2014-07-27 04:16"
         }
     },
-    "Web management": {
-        "code": "1IK424",
-        "name": "Web management",
-        "url": "http://coursepress.lnu.se/kurs/web-management/",
-        "curriculumUrl": "http://coursepress.lnu.se/kurs/web-management/kursplanerin/",
-        "preamble": "Kursen Web Management syftar till att ge studenten grundläggande kunskap om serverscriptspråket PHP samt publiceringssystemet WordPress. Målet med kursen är att lära sig att utifrån en WordPress-installation producera en dynamisk webbplats.De av er som har uppgifter kvar att restredovisa mejlar in dessa till mig, John, senast 1 september. Är det en wordpress-uppgift skickar du endast in tema-mappen/mapparna som är av intresse.Tack för alla redovisningar och bra genomförda projekt! Det var riktigt kul att se och kommunen var väldigt nöjda med alla förslag!\nJag kommer återkomma med mer feedback efter att jag har kollat igenom era inlämningar av kod och rapport. Det ska också ha gått ut en kursutvärdering till er studentmejl som jag gärna ser ni fyller i!Annars får jag tacka för denna kurs och hoppas alla få en fin sommar!På torsdag kommer ni få redovisa det projekt (Open Kalmar) ni slitit med de senaste veckorna. På redovisningen kommer dels jag vara med samt några personer från Kalmar kommun. Ni kommer ha ca 15-20 minuter på er att presentera ert arbete samt svara på frågor. Se till att vara förberedda så det blir en proffsig och givande redovisning.Redovisningar på campus sker i ny111 medan distansstudenter samlas i virtuella klassrummet men vi försöker köra redovisningen via Skype där ni också kan dela ut någons skärm för att visa presentation/sidan. Se till att ni testat tekniken så att microfoner och annat fungerar. Vi kommer ha ett ganska tajt schema under dagen och något teknikstrul finns det inte plats för.Redovisning av rapport och kod sker enligt instruktioner på projektbeskrivningen. Observera att jag vill ha koden inskickad samt även en fil med allt innehåll. Den skapas lät via “verktyg/tools” –> “Export” i administrationsmenyn. Se till att “All content” är valt och välj “download export file”. Denna fil (som kommer vara av filändelsen .xml ska förutom koden (ert thema + eventuellt parent theme) skickas in till mig i en zippad fil.Ses på torsdag!Jag har bokat in ett resttillfälle i ert schema. Det är måndagen den 2/6. 1315-1400 för distans och 1415-1500 för campus.\nDetta tillfälle är endast för restredovisning. Se till att vara i tid. Precis som vanlig så lämnar vi rummen ifall det inte är någon där. Nästa möjlighet till restredovisning blir i höst. ",
-        "latestPost": {
-            "title": "RestredovisningTack!Angående redovisningenResttillfälle",
-            "author": "John Häggerud",
-            "date": "2014-07-07 12:20"
-        }
-    },
     "Inledande programmering med Java": {
         "code": "1DV432",
         "name": "Inledande programmering med Java",
@@ -322,6 +310,18 @@
             "title": "Dags för kursvärdering!Om sista kursveckanFusk?Sista (ordinarie) stegtestet!",
             "author": "Anne Norling",
             "date": "2014-07-09 01:48"
+        }
+    },
+    "Web management": {
+        "code": "1IK424",
+        "name": "Web management",
+        "url": "http://coursepress.lnu.se/kurs/web-management/",
+        "curriculumUrl": "http://coursepress.lnu.se/kurs/web-management/kursplanerin/",
+        "preamble": "Kursen Web Management syftar till att ge studenten grundläggande kunskap om serverscriptspråket PHP samt publiceringssystemet WordPress. Målet med kursen är att lära sig att utifrån en WordPress-installation producera en dynamisk webbplats.De av er som har uppgifter kvar att restredovisa mejlar in dessa till mig, John, senast 1 september. Är det en wordpress-uppgift skickar du endast in tema-mappen/mapparna som är av intresse.Tack för alla redovisningar och bra genomförda projekt! Det var riktigt kul att se och kommunen var väldigt nöjda med alla förslag!\nJag kommer återkomma med mer feedback efter att jag har kollat igenom era inlämningar av kod och rapport. Det ska också ha gått ut en kursutvärdering till er studentmejl som jag gärna ser ni fyller i!Annars får jag tacka för denna kurs och hoppas alla få en fin sommar!På torsdag kommer ni få redovisa det projekt (Open Kalmar) ni slitit med de senaste veckorna. På redovisningen kommer dels jag vara med samt några personer från Kalmar kommun. Ni kommer ha ca 15-20 minuter på er att presentera ert arbete samt svara på frågor. Se till att vara förberedda så det blir en proffsig och givande redovisning.Redovisningar på campus sker i ny111 medan distansstudenter samlas i virtuella klassrummet men vi försöker köra redovisningen via Skype där ni också kan dela ut någons skärm för att visa presentation/sidan. Se till att ni testat tekniken så att microfoner och annat fungerar. Vi kommer ha ett ganska tajt schema under dagen och något teknikstrul finns det inte plats för.Redovisning av rapport och kod sker enligt instruktioner på projektbeskrivningen. Observera att jag vill ha koden inskickad samt även en fil med allt innehåll. Den skapas lät via “verktyg/tools” –> “Export” i administrationsmenyn. Se till att “All content” är valt och välj “download export file”. Denna fil (som kommer vara av filändelsen .xml ska förutom koden (ert thema + eventuellt parent theme) skickas in till mig i en zippad fil.Ses på torsdag!Jag har bokat in ett resttillfälle i ert schema. Det är måndagen den 2/6. 1315-1400 för distans och 1415-1500 för campus.\nDetta tillfälle är endast för restredovisning. Se till att vara i tid. Precis som vanlig så lämnar vi rummen ifall det inte är någon där. Nästa möjlighet till restredovisning blir i höst. ",
+        "latestPost": {
+            "title": "RestredovisningTack!Angående redovisningenResttillfälle",
+            "author": "John Häggerud",
+            "date": "2014-07-07 12:20"
         }
     },
     "Tillämpad interaktionsdesign": {
@@ -407,18 +407,6 @@
             "date": "no data"
         }
     },
-    "Datorhårdvaruteknik": {
-        "code": "1DV426",
-        "name": "Datorhårdvaruteknik",
-        "url": "http://coursepress.lnu.se/kurs/datorhardvaruteknik/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV426&documenttype=pdf&lang=sv",
-        "preamble": "Vi satsar på att köra i Ny110K även idag.Morgondagens seminarie är flyttat till Ny110.",
-        "latestPost": {
-            "title": "Salsbyte även idagSalsbyte imorgon",
-            "author": "Marcus Wilhelmsson",
-            "date": "2014-04-24 07:33"
-        }
-    },
     "Examensarbete på kandidatnivå": {
         "code": "2DV00E",
         "name": "Examensarbete på kandidatnivå",
@@ -443,18 +431,6 @@
             "date": "2014-04-29 09:26"
         }
     },
-    "Gränssnittsutveckling – användarvänlighet och tillgänglighet": {
-        "code": "1IK419",
-        "name": "Gränssnittsutveckling – användarvänlighet och tillgänglighet",
-        "url": "http://coursepress.lnu.se/kurs/granssnittsutveckling-anvandarvanlighet-och-tillganglighet/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK419&documenttype=pdf&lang=sv",
-        "preamble": "För att skapa effektiva, attraktiva och användbara användargränssnitt gäller det att få flera pusselbitar att falla på plats. Gränssnittet behöver vara anpassat till sin målgrupp och det behöver vara utformat så att det är lätt att förstå och lätt att använda. Dessutom ska gränssnittet utföra en uppgift som är meningsfull för dess användare, t ex att informera användaren på ett effektivt och/eller underhållande sätt eller utföra någon nyttig tjänst. Sist, men inte minst, bör det också vara estetiskt tilltalande.\nI den här kursen får du lära dig att hantera de verktyg man använder för att skapa grafisk material. Vidare får du lära dig att anpassa design, layout och funktion till den tänkta målgruppen och du får lära dig tekniker för hur man gör för att skapa ett användargränssnitt som är användbart på riktigt, dvs fyller ett syfte för sin målgrupp och som tar hänsyn till den mänskliga användarens förutsättningar och begränsningar.OBS! För uppdateringar, diskussioner och meddelanden används gruppen och kursforumet, så se till att hålla kolla på det som skickas ut där genom att bevaka händelser i gruppen (inställningar för bevakning och notifikationer gör man genom att klicka på Direktbevakning).I nyare versioner av IE måste man köra läsaren i kompabilitetsläge för att sida skall laddas korrekt.Klicka på kugghjulet följt av i kompabilitetsläge lägg till ”website” lnu.se samt klicka på stäng. ",
-        "latestPost": {
-            "title": "Virtuella klassrumen",
-            "author": "Peter Adiels",
-            "date": "2014-04-03 10:29"
-        }
-    },
     "Webbramverk": {
         "code": "1DV450",
         "name": "Webbramverk",
@@ -465,6 +441,30 @@
             "title": "Sista restinsamlingen gjordRest-releaserRestredovisningarExaminering 2",
             "author": "John Häggerud",
             "date": "2014-05-21 06:31"
+        }
+    },
+    "Datorhårdvaruteknik": {
+        "code": "1DV426",
+        "name": "Datorhårdvaruteknik",
+        "url": "http://coursepress.lnu.se/kurs/datorhardvaruteknik/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV426&documenttype=pdf&lang=sv",
+        "preamble": "Vi satsar på att köra i Ny110K även idag.Morgondagens seminarie är flyttat till Ny110.",
+        "latestPost": {
+            "title": "Salsbyte även idagSalsbyte imorgon",
+            "author": "Marcus Wilhelmsson",
+            "date": "2014-04-24 07:33"
+        }
+    },
+    "Gränssnittsutveckling – användarvänlighet och tillgänglighet": {
+        "code": "1IK419",
+        "name": "Gränssnittsutveckling – användarvänlighet och tillgänglighet",
+        "url": "http://coursepress.lnu.se/kurs/granssnittsutveckling-anvandarvanlighet-och-tillganglighet/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1IK419&documenttype=pdf&lang=sv",
+        "preamble": "För att skapa effektiva, attraktiva och användbara användargränssnitt gäller det att få flera pusselbitar att falla på plats. Gränssnittet behöver vara anpassat till sin målgrupp och det behöver vara utformat så att det är lätt att förstå och lätt att använda. Dessutom ska gränssnittet utföra en uppgift som är meningsfull för dess användare, t ex att informera användaren på ett effektivt och/eller underhållande sätt eller utföra någon nyttig tjänst. Sist, men inte minst, bör det också vara estetiskt tilltalande.\nI den här kursen får du lära dig att hantera de verktyg man använder för att skapa grafisk material. Vidare får du lära dig att anpassa design, layout och funktion till den tänkta målgruppen och du får lära dig tekniker för hur man gör för att skapa ett användargränssnitt som är användbart på riktigt, dvs fyller ett syfte för sin målgrupp och som tar hänsyn till den mänskliga användarens förutsättningar och begränsningar.OBS! För uppdateringar, diskussioner och meddelanden används gruppen och kursforumet, så se till att hålla kolla på det som skickas ut där genom att bevaka händelser i gruppen (inställningar för bevakning och notifikationer gör man genom att klicka på Direktbevakning).I nyare versioner av IE måste man köra läsaren i kompabilitetsläge för att sida skall laddas korrekt.Klicka på kugghjulet följt av i kompabilitetsläge lägg till ”website” lnu.se samt klicka på stäng. ",
+        "latestPost": {
+            "title": "Virtuella klassrumen",
+            "author": "Peter Adiels",
+            "date": "2014-04-03 10:29"
         }
     },
     "Webbprojekt I": {
@@ -491,18 +491,6 @@
             "date": "2014-04-09 15:43"
         }
     },
-    "Linuxadministration I": {
-        "code": "1DV417",
-        "name": "Linuxadministration I",
-        "url": "http://coursepress.lnu.se/kurs/linuxadministration-i/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV417&documenttype=pdf&lang=sv",
-        "preamble": "Detta är webbplatsen för kursen Linuxadministration I 1DV417.Tentamensåterlämning sker 2014-04-07 kl 15.00-15.30 i Ny227.https://connect.sunet.se/forelasning_1dv417_lnu_seFör den som vill närvara.Morgondagens föreläsning är inställd, jag kommer istället köra en “inför tentan”-föreläsning på måndag (24/3) kl 10.15-12.00 i Ny227k.Bara så att ingen missat det, det meddelades på en tidigare föreläsning, så är jag i Växjö idag.",
-        "latestPost": {
-            "title": "TentamensåterlämningConnect-rumVeckans föreläsningDagens föreläsning",
-            "author": "Marcus Wilhelmsson",
-            "date": "2014-04-03 03:39"
-        }
-    },
     "Nätverkssäkerhet": {
         "code": "1DV425",
         "name": "Nätverkssäkerhet",
@@ -513,6 +501,18 @@
             "title": "TentamensåterlämningHjälpmedel vid tentamenSeminarium – FredagGästföreläsning",
             "author": "Marcus Wilhelmsson",
             "date": "2014-04-11 02:07"
+        }
+    },
+    "Linuxadministration I": {
+        "code": "1DV417",
+        "name": "Linuxadministration I",
+        "url": "http://coursepress.lnu.se/kurs/linuxadministration-i/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=1DV417&documenttype=pdf&lang=sv",
+        "preamble": "Detta är webbplatsen för kursen Linuxadministration I 1DV417.Tentamensåterlämning sker 2014-04-07 kl 15.00-15.30 i Ny227.https://connect.sunet.se/forelasning_1dv417_lnu_seFör den som vill närvara.Morgondagens föreläsning är inställd, jag kommer istället köra en “inför tentan”-föreläsning på måndag (24/3) kl 10.15-12.00 i Ny227k.Bara så att ingen missat det, det meddelades på en tidigare föreläsning, så är jag i Växjö idag.",
+        "latestPost": {
+            "title": "TentamensåterlämningConnect-rumVeckans föreläsningDagens föreläsning",
+            "author": "Marcus Wilhelmsson",
+            "date": "2014-04-03 03:39"
         }
     },
     "Shaderprogrammering": {
@@ -550,18 +550,6 @@
             "date": "no data"
         }
     },
-    "Windowsadministration II": {
-        "code": "1DV424",
-        "name": "Windowsadministration II",
-        "url": "http://coursepress.lnu.se/kurs/windowsadministration-ii/",
-        "curriculumUrl": "http://coursepress.lnu.se/kurs/windowsadministration-ii/kursplanering/",
-        "preamble": "Ämne: Datavetenskap\nNivå: Grundnivå\nHögskolepoäng: 7,5\nKurskod: 1DV424Kursen Windowsadministration II är en programkurs för studenter vid programmet IT-tekniker vid Linnéuniversitetet i Kalmar. Kursen behandlar installation och administration av ett flertal av de mer avancerade tjänsterna i Windows serveroperativsystem. Vidare behandlar kursen hur man identifiera och åtgärdar säkerhetsproblem i en Windows servermiljö.På denna webbplats hittar du all information kring kursen. Du måste logga in för att få tillgång till dokument, inspelade föreläsningar, etc, och du måste dessutom vara registrerad som kursdeltagare för att få tillgång till gruppindelningar, diskussionsgrupp och kursens driftsmiljö.Är du en anonym besökare har du bara begränsad åtkomst till materialet på denna webbplats.Jag har lyckats dubbelboka mig i eftermiddag.\nOm ni behöver handledning så hör av er till mig så hittar vi en tid på fredag så hjälper jag er då.\n/jacobJag VABar idag och kan tyvärr inte komma in till labben idag men jag kan hjälpa er via Adobe Connect.\nOm ni behöver hjälp så gå in på, https://connect.sunet.se/laboration_1dv416_lnu_se/ och kontakta mig så kan ni dela er skärm så kan jag hjälpa er.Nu finns labben ute med alla bilagor.\nNär ni sätter upp VPN så använda statisk adressering istället för DHCP.\nOch strunta i Wpad-fix skriptet jag visade på föreläsningen.\nLycka tillLabben till Modul 1 är ganska omfattade på grund av att ni även ska skapa grunden till företagets infrastruktur.\nLabben bestå av två uppdrag och det första uppdraget kan ska ni kunna utföra utan problem med de förkunskaper som ni har.\nJag rekommenderar därför att ni startar med Uppdrag 1 så snart ni kan så att ni kan ägna labbtiden nästa vecka till Uppdag 2 som innebär implementering av DFS och FSRM.\nTrevlig helg",
-        "latestPost": {
-            "title": "ProjekthandledningDistanslabbModul 5 LabGet a head start",
-            "author": "Jacob Lindehoff",
-            "date": "2014-03-13 09:34"
-        }
-    },
     "Metoder för interaktionsdesign II": {
         "code": "1IK433",
         "name": "Metoder för interaktionsdesign II",
@@ -572,6 +560,18 @@
             "title": "RedovisningstiderHandledning fredag.Fredagens handledningHandledningstider Torsdag ( Restaurang )",
             "author": "Johan Malmquist",
             "date": "2014-03-25 10:59"
+        }
+    },
+    "Windowsadministration II": {
+        "code": "1DV424",
+        "name": "Windowsadministration II",
+        "url": "http://coursepress.lnu.se/kurs/windowsadministration-ii/",
+        "curriculumUrl": "http://coursepress.lnu.se/kurs/windowsadministration-ii/kursplanering/",
+        "preamble": "Ämne: Datavetenskap\nNivå: Grundnivå\nHögskolepoäng: 7,5\nKurskod: 1DV424Kursen Windowsadministration II är en programkurs för studenter vid programmet IT-tekniker vid Linnéuniversitetet i Kalmar. Kursen behandlar installation och administration av ett flertal av de mer avancerade tjänsterna i Windows serveroperativsystem. Vidare behandlar kursen hur man identifiera och åtgärdar säkerhetsproblem i en Windows servermiljö.På denna webbplats hittar du all information kring kursen. Du måste logga in för att få tillgång till dokument, inspelade föreläsningar, etc, och du måste dessutom vara registrerad som kursdeltagare för att få tillgång till gruppindelningar, diskussionsgrupp och kursens driftsmiljö.Är du en anonym besökare har du bara begränsad åtkomst till materialet på denna webbplats.Jag har lyckats dubbelboka mig i eftermiddag.\nOm ni behöver handledning så hör av er till mig så hittar vi en tid på fredag så hjälper jag er då.\n/jacobJag VABar idag och kan tyvärr inte komma in till labben idag men jag kan hjälpa er via Adobe Connect.\nOm ni behöver hjälp så gå in på, https://connect.sunet.se/laboration_1dv416_lnu_se/ och kontakta mig så kan ni dela er skärm så kan jag hjälpa er.Nu finns labben ute med alla bilagor.\nNär ni sätter upp VPN så använda statisk adressering istället för DHCP.\nOch strunta i Wpad-fix skriptet jag visade på föreläsningen.\nLycka tillLabben till Modul 1 är ganska omfattade på grund av att ni även ska skapa grunden till företagets infrastruktur.\nLabben bestå av två uppdrag och det första uppdraget kan ska ni kunna utföra utan problem med de förkunskaper som ni har.\nJag rekommenderar därför att ni startar med Uppdrag 1 så snart ni kan så att ni kan ägna labbtiden nästa vecka till Uppdag 2 som innebär implementering av DFS och FSRM.\nTrevlig helg",
+        "latestPost": {
+            "title": "ProjekthandledningDistanslabbModul 5 LabGet a head start",
+            "author": "Jacob Lindehoff",
+            "date": "2014-03-13 09:34"
         }
     },
     "Metoder för interaktionsdesign I": {
@@ -610,18 +610,6 @@
             "date": "2014-01-13 09:23"
         }
     },
-    "Vetenskapsmetod och teori": {
-        "code": "4IK024",
-        "name": "Vetenskapsmetod och teori",
-        "url": "http://coursepress.lnu.se/kurs/vetenskapsmetod-och-teori/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=4IK024&documenttype=pdf&lang=sv",
-        "preamble": "I denna kurs ska du tillägna dig grundläggande kunskaper om vetenskapsteori med speciell fokus på metoder inom ämnesområdet datavetenskap.Nyttan med denna kurs\nAvsikten med denna kurs är att förbereda dig för ditt kommande uppsatsarbete och forskningsprojekt. Det du lär dig kan dessutom vara användbart i alla slags undersökningar du kommer att utföra inom din profession. \nWonderfest 2010: Is Mathematics More Art Than Science? from  Wonderfest on FORA.tv",
-        "latestPost": {
-            "title": "Is mathematics more art than science?",
-            "author": "Patrik Brandt",
-            "date": "2014-01-08 04:47"
-        }
-    },
     "Introduktion till informationsteknik": {
         "code": "1IK426",
         "name": "Introduktion till informationsteknik",
@@ -632,6 +620,18 @@
             "title": "Komplettering/OmexaminationResttillfället och kursvärderingLänkar, tider och opponenter för Uppgift 4Grupper till onlineseminariet",
             "author": "Patrik Brandt",
             "date": "2014-01-11 05:25"
+        }
+    },
+    "Vetenskapsmetod och teori": {
+        "code": "4IK024",
+        "name": "Vetenskapsmetod och teori",
+        "url": "http://coursepress.lnu.se/kurs/vetenskapsmetod-och-teori/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=4IK024&documenttype=pdf&lang=sv",
+        "preamble": "I denna kurs ska du tillägna dig grundläggande kunskaper om vetenskapsteori med speciell fokus på metoder inom ämnesområdet datavetenskap.Nyttan med denna kurs\nAvsikten med denna kurs är att förbereda dig för ditt kommande uppsatsarbete och forskningsprojekt. Det du lär dig kan dessutom vara användbart i alla slags undersökningar du kommer att utföra inom din profession. \nWonderfest 2010: Is Mathematics More Art Than Science? from  Wonderfest on FORA.tv",
+        "latestPost": {
+            "title": "Is mathematics more art than science?",
+            "author": "Patrik Brandt",
+            "date": "2014-01-08 04:47"
         }
     },
     "Windowsadministration I": {
@@ -680,18 +680,6 @@
             "date": "2013-10-08 08:25"
         }
     },
-    "Examensarbete inom informatik, interaktionsdesign": {
-        "code": "2IK50E",
-        "name": "Examensarbete inom informatik, interaktionsdesign",
-        "url": "http://coursepress.lnu.se/kurs/examensarbete-inom-informatik-interaktionsdesign/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2IK50E&documenttype=pdf&lang=sv",
-        "preamble": "Kursen Examensarbete inom informatik, interaktionsdesign, är sista kursen som ges inom utbildningsprogrammet interaktionsdesigner vid Linnéuniversitetet. Kursen går under utbildningens sista tio veckor och genomförs på helfart. Under dessa tio veckor genomför studenten enskild eller i grupp sitt examensarbete i samråd med sin tilldelade handledare. Målet med kursen är att studenten skall kunna:Vanliga aktiviteter under kursens gång är: Som tidigare annonserats så finns ett resttillfälle inbokat för presentation av examensarbeten den 28:e augusti.Jag vill att ni senast fredagen den 16:e augusti meddelar till mig om det är så att du planerar att presentera ditt arbete vid detta tillfälle. I samband med detta så kommer jag att sätta ett presentationsschema där opponenter, examinatorer och handledare framgår.Ditt arbete skall vara granskat av din handledare senast onsdagen den 21:a augusti så att detta är klart att presentera.MorganDe av er som ännu inte presenterat sina examensarbete har möjlighet att göra detta vid ett extra tillfälle. Detta tillfälle infaller den 28:e augusti klockan 08-17 i sal NY104. Senast den 21:a augusti skall du ha lämnat in ditt arbete till din handledare för en bedömning huruvida detta är klar för presentation. Efter den 21:a augusti kommer sedan ett presentationsschema att sammanställas och läggas ut på kurshemsidan för examensarbetet.MorganNu finns det information kring processen att bli godkänd på examensarbete samt ansöka om examen under “Att ansöka om examen” till vänster.MorganGlöm inte att det idag klockan 08.00 var deadline för inlämning av era examensarbeten. Om ni inte redan gjort detta så bör ni således se till att göra detta snarast så att examinatorer och opponenter får tid till att läsa igenom era arbete inför nästa veckas presentationer.Morgan",
-        "latestPost": {
-            "title": "Resttillfälle presentation examensarbetePresentation av examensarbete – ResttillfälleGodkännande av examensarbete och ansökan om examenInlämning av examensarbeten",
-            "author": "Morgan Rydbrink",
-            "date": "2013-08-05 09:07"
-        }
-    },
     "Nätverksteknik I": {
         "code": "1DV414",
         "name": "Nätverksteknik I",
@@ -702,6 +690,18 @@
             "title": "Extra laborationstillfälleTider för omprovKursvärderingExtratillfälle för subnetting",
             "author": "Marcus Wilhelmsson",
             "date": "2013-11-22 10:52"
+        }
+    },
+    "Examensarbete inom informatik, interaktionsdesign": {
+        "code": "2IK50E",
+        "name": "Examensarbete inom informatik, interaktionsdesign",
+        "url": "http://coursepress.lnu.se/kurs/examensarbete-inom-informatik-interaktionsdesign/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2IK50E&documenttype=pdf&lang=sv",
+        "preamble": "Kursen Examensarbete inom informatik, interaktionsdesign, är sista kursen som ges inom utbildningsprogrammet interaktionsdesigner vid Linnéuniversitetet. Kursen går under utbildningens sista tio veckor och genomförs på helfart. Under dessa tio veckor genomför studenten enskild eller i grupp sitt examensarbete i samråd med sin tilldelade handledare. Målet med kursen är att studenten skall kunna:Vanliga aktiviteter under kursens gång är: Som tidigare annonserats så finns ett resttillfälle inbokat för presentation av examensarbeten den 28:e augusti.Jag vill att ni senast fredagen den 16:e augusti meddelar till mig om det är så att du planerar att presentera ditt arbete vid detta tillfälle. I samband med detta så kommer jag att sätta ett presentationsschema där opponenter, examinatorer och handledare framgår.Ditt arbete skall vara granskat av din handledare senast onsdagen den 21:a augusti så att detta är klart att presentera.MorganDe av er som ännu inte presenterat sina examensarbete har möjlighet att göra detta vid ett extra tillfälle. Detta tillfälle infaller den 28:e augusti klockan 08-17 i sal NY104. Senast den 21:a augusti skall du ha lämnat in ditt arbete till din handledare för en bedömning huruvida detta är klar för presentation. Efter den 21:a augusti kommer sedan ett presentationsschema att sammanställas och läggas ut på kurshemsidan för examensarbetet.MorganNu finns det information kring processen att bli godkänd på examensarbete samt ansöka om examen under “Att ansöka om examen” till vänster.MorganGlöm inte att det idag klockan 08.00 var deadline för inlämning av era examensarbeten. Om ni inte redan gjort detta så bör ni således se till att göra detta snarast så att examinatorer och opponenter får tid till att läsa igenom era arbete inför nästa veckas presentationer.Morgan",
+        "latestPost": {
+            "title": "Resttillfälle presentation examensarbetePresentation av examensarbete – ResttillfälleGodkännande av examensarbete och ansökan om examenInlämning av examensarbeten",
+            "author": "Morgan Rydbrink",
+            "date": "2013-08-05 09:07"
         }
     },
     "Computer Networks administration": {
@@ -727,18 +727,6 @@
             "date": "no data"
         }
     },
-    "Effektiviserad drift av datorsystem": {
-        "code": "1DV427",
-        "name": "Effektiviserad drift av datorsystem",
-        "url": "http://coursepress.lnu.se/kurs/effektiviserad-drift-av-datorsystem/",
-        "curriculumUrl": "http://coursepress.lnu.se/kurs/effektiviserad-drift-av-datorsystem/kursplan/",
-        "preamble": "Kursen syftar till att ge studenten förståelse för administration och underhåll av nätverk och servrar med fokus på drift, statuskontroll och styrning av nätverksenheter och servrar. Kursen innefattar även installation och konfigurering av tillhörande övervakningsverktyg.Genom dessa kunskaper förväntas studenten, efter genomgången kurs, sjävständigt kunna redogöra för vilka faktorer som påverkar vid administration och övervakning av dator/nätverkssystem, dess säkerhetsaspekter samt analysera miljöer för att effektivisera och säkerställa driften av datorsystem.Tentamensåterlämning sker imorgon fredag 2013-01-25 kl. 14.15 i sal Ny105k.Publicerade projekt och tentamensfrågor ligger under “Publicerade projekt”Information om kursens gästföreläsning ligger ute.Glöm inte att skicka in scriptet du skrivit via mail.",
-        "latestPost": {
-            "title": "TentamensåterlämningPublicerade projekt och tentamensfrågorGästföreläsningInskickning av övervakningsscript",
-            "author": "Marcus Wilhelmsson",
-            "date": "2013-01-24 10:10"
-        }
-    },
     "Projektarbete med vetenskapsteori": {
         "code": "2IK400",
         "name": "Projektarbete med vetenskapsteori",
@@ -751,16 +739,16 @@
             "date": "2013-03-18 10:04"
         }
     },
-    "Aktuella problem inom datavetenskap": {
-        "code": "2DV005",
-        "name": "Aktuella problem inom datavetenskap",
-        "url": "http://coursepress.lnu.se/kurs/aktuella-problem-inom-datavetenskap/",
-        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV005&documenttype=pdf&lang=sv",
-        "preamble": "This is the main page for the course in JavaFX.Hi,Many of you have been asking about the deadline for the project. I will be a nice guy and say that the deadline is January 10.//TobiasHi all,Here are the lecture notes for tomorrow, they have been extended quite a bit from what I had prepared for last week.Lecture 4 Hi all,I am sad to say that due to illness I need to cancel the lecture tomorrow (November 30). The lecture was supposed to be about different controls and it is finished, but I take this opportunity to add more material to it — most significantly SceneBuilder.I hope to see you all next time!TobiasIt is now possible to download Lecture 3!Also, we have new rooms! Friday’s lecture will be in K1082V and all the following lectures in C2303.",
+    "Effektiviserad drift av datorsystem": {
+        "code": "1DV427",
+        "name": "Effektiviserad drift av datorsystem",
+        "url": "http://coursepress.lnu.se/kurs/effektiviserad-drift-av-datorsystem/",
+        "curriculumUrl": "http://coursepress.lnu.se/kurs/effektiviserad-drift-av-datorsystem/kursplan/",
+        "preamble": "Kursen syftar till att ge studenten förståelse för administration och underhåll av nätverk och servrar med fokus på drift, statuskontroll och styrning av nätverksenheter och servrar. Kursen innefattar även installation och konfigurering av tillhörande övervakningsverktyg.Genom dessa kunskaper förväntas studenten, efter genomgången kurs, sjävständigt kunna redogöra för vilka faktorer som påverkar vid administration och övervakning av dator/nätverkssystem, dess säkerhetsaspekter samt analysera miljöer för att effektivisera och säkerställa driften av datorsystem.Tentamensåterlämning sker imorgon fredag 2013-01-25 kl. 14.15 i sal Ny105k.Publicerade projekt och tentamensfrågor ligger under “Publicerade projekt”Information om kursens gästföreläsning ligger ute.Glöm inte att skicka in scriptet du skrivit via mail.",
         "latestPost": {
-            "title": "DeadlineTomorrow’s lectureCancelled lectureLecture 3",
-            "author": "Tobias Andersson-Gidlund",
-            "date": "2012-12-17 09:26"
+            "title": "TentamensåterlämningPublicerade projekt och tentamensfrågorGästföreläsningInskickning av övervakningsscript",
+            "author": "Marcus Wilhelmsson",
+            "date": "2013-01-24 10:10"
         }
     },
     "Webbutveckling med PHP II": {
@@ -775,7 +763,18 @@
             "date": "2013-01-15 09:07"
         }
     },
-    "count": 67,
+    "Aktuella problem inom datavetenskap": {
+        "code": "2DV005",
+        "name": "Aktuella problem inom datavetenskap",
+        "url": "http://coursepress.lnu.se/kurs/aktuella-problem-inom-datavetenskap/",
+        "curriculumUrl": "http://prod.kursinfo.lnu.se/utbildning/GenerateDocument.ashx?templatetype=coursesyllabus&code=2DV005&documenttype=pdf&lang=sv",
+        "preamble": "This is the main page for the course in JavaFX.Hi,Many of you have been asking about the deadline for the project. I will be a nice guy and say that the deadline is January 10.//TobiasHi all,Here are the lecture notes for tomorrow, they have been extended quite a bit from what I had prepared for last week.Lecture 4 Hi all,I am sad to say that due to illness I need to cancel the lecture tomorrow (November 30). The lecture was supposed to be about different controls and it is finished, but I take this opportunity to add more material to it — most significantly SceneBuilder.I hope to see you all next time!TobiasIt is now possible to download Lecture 3!Also, we have new rooms! Friday’s lecture will be in K1082V and all the following lectures in C2303.",
+        "latestPost": {
+            "title": "DeadlineTomorrow’s lectureCancelled lectureLecture 3",
+            "author": "Tobias Andersson-Gidlund",
+            "date": "2012-12-17 09:26"
+        }
+    },
     "Nätverkssäkerhet fördjupning": {
         "code": "2DV404",
         "name": "Nätverkssäkerhet fördjupning",
@@ -788,6 +787,7 @@
             "date": "2013-01-09 01:34"
         }
     },
+    "count": 68,
     "Moderna applikationsmiljöer": {
         "code": "2DV400",
         "name": "Moderna applikationsmiljöer",
