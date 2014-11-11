@@ -182,6 +182,7 @@ function scrapePage (url, callback) {
                     console.log(hrefCount);
                     console.log(Object.keys(json).length);
 
+                    // Compensating form timestamp and readable date
                     if (hrefCount !== Object.keys(json).length - 2) {
 
                         return;
