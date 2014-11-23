@@ -70,7 +70,7 @@ class Validator {
             }
         }
 
-        if ($authenticated) {
+        if ($authenticated === true) {
 
             $sessionModel->setLoginSession();
             // $_SESSION['login'] = true;
@@ -80,4 +80,6 @@ class Validator {
 
         return self::$toLogin;
     }
-} 
+}
+
+$validator = new Validator();

@@ -20,6 +20,7 @@ var MessageBoard = {
         document.getElementById("buttonLogout").onclick = function(e) {MessageBoard.logout(); return false;}
 
         MessageBoard.textField.onkeypress = function(e){
+
             if(!e) var e = window.event;
 
             if(e.keyCode == 13 && !e.shiftKey){

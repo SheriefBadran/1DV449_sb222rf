@@ -41,8 +41,8 @@
       <file leaf-file-name="MessageBoard.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/MessageBoard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2670">
-              <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="2685">
+              <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -51,8 +51,8 @@
       <file leaf-file-name="rapport.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rapport.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5254777" vertical-offset="0" max-vertical-offset="628">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.85987264" vertical-offset="165" max-vertical-offset="855">
+              <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -84,8 +84,28 @@
       <file leaf-file-name="mess.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/mess.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="2895">
+            <state vertical-scroll-proportion="-106.25" vertical-offset="0" max-vertical-offset="2895">
               <caret line="170" column="59" selection-start-line="170" selection-start-column="59" selection-end-line="170" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="750">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="validate.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public_html/validate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="780">
+              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -94,18 +114,8 @@
       <file leaf-file-name="MessageLongPoll.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="2280">
+            <state vertical-scroll-proportion="-36.875" vertical-offset="0" max-vertical-offset="2280">
               <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDOdatabase.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/db/PDOdatabase.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="705">
-              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -114,21 +124,9 @@
       <file leaf-file-name="Validator.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public_html/model/Validator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1320">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="46" />
+            <state vertical-scroll-proportion="-52.5" vertical-offset="0" max-vertical-offset="1350">
+              <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public_html/model/MessageRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="870">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-              <folding>
-                <marker date="1416351093000" expanded="true" signature="693:730" placeholder="SELECT * FRO..user..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -170,22 +168,22 @@
         <option value="$PROJECT_DIR$/public_html/model/MessageRepository.php" />
         <option value="$PROJECT_DIR$/public_html/view/CookieStorage.php" />
         <option value="$PROJECT_DIR$/public_html/css/login.css" />
-        <option value="$PROJECT_DIR$/public_html/validate.php" />
         <option value="$PROJECT_DIR$/public_html/model/SessionModel.php" />
         <option value="$PROJECT_DIR$/public_html/logout.php" />
         <option value="$PROJECT_DIR$/public_html/sec.php" />
-        <option value="$PROJECT_DIR$/public_html/index.php" />
         <option value="$PROJECT_DIR$/public_html/index.html" />
         <option value="$PROJECT_DIR$/public_html/functions.php" />
-        <option value="$PROJECT_DIR$/public_html/model/Validator.php" />
         <option value="$PROJECT_DIR$/data/db/config.php" />
         <option value="$PROJECT_DIR$/public_html/mess.php" />
         <option value="$PROJECT_DIR$/data/db/PDOdatabase.php" />
         <option value="$PROJECT_DIR$/public_html/Message.js" />
         <option value="$PROJECT_DIR$/public_html/Chat.js" />
-        <option value="$PROJECT_DIR$/public_html/MessageBoard.js" />
         <option value="$PROJECT_DIR$/data/pathConfig.php" />
         <option value="$PROJECT_DIR$/public_html/model/MessageLongPoll.php" />
+        <option value="$PROJECT_DIR$/public_html/MessageBoard.js" />
+        <option value="$PROJECT_DIR$/public_html/index.php" />
+        <option value="$PROJECT_DIR$/public_html/model/Validator.php" />
+        <option value="$PROJECT_DIR$/public_html/validate.php" />
         <option value="$PROJECT_DIR$/rapport.md" />
       </list>
     </option>
@@ -609,12 +607,12 @@
       <workItem from="1416316009009" duration="3923000" />
       <workItem from="1416320389504" duration="116883000" />
       <workItem from="1416659482853" duration="4637000" />
-      <workItem from="1416750190557" duration="5496000" />
+      <workItem from="1416750190557" duration="14854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130982000" />
+    <option name="totallyTimeSpent" value="140340000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -757,7 +755,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="870">
           <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
-            <marker date="1416351093000" expanded="true" signature="693:730" placeholder="SELECT * FRO..user..." />
+            <marker date="1416351093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -831,7 +829,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="870">
           <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
-            <marker date="1416351093000" expanded="true" signature="693:730" placeholder="SELECT * FRO..user..." />
+            <marker date="1416351093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -855,6 +853,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="540">
           <caret line="19" column="48" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -862,6 +861,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="585">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,40 +1010,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/validate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.875" vertical-offset="0" max-vertical-offset="810">
-          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/db/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="300">
           <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/model/Validator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="750" max-vertical-offset="1320">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11764706" vertical-offset="76" max-vertical-offset="750">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/mess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1053" max-vertical-offset="2895">
-          <caret line="170" column="59" selection-start-line="170" selection-start-column="59" selection-end-line="170" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1030,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="870">
           <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
           <folding>
-            <marker date="1416351093000" expanded="true" signature="693:730" placeholder="SELECT * FRO..user..." />
+            <marker date="1416351093000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
           </folding>
         </state>
       </provider>
@@ -1089,22 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="2280">
-          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/MessageBoard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="2670">
-          <caret line="92" column="39" selection-start-line="92" selection-start-column="39" selection-end-line="92" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/Message.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1155">
@@ -1113,10 +1067,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/MessageBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2685">
+          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/mess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-106.25" vertical-offset="0" max-vertical-offset="2895">
+          <caret line="170" column="59" selection-start-line="170" selection-start-column="59" selection-end-line="170" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="750">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/model/Validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-52.5" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="84" column="29" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/validate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="780">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-36.875" vertical-offset="0" max-vertical-offset="2280">
+          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/rapport.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5254777" vertical-offset="0" max-vertical-offset="628">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.85987264" vertical-offset="165" max-vertical-offset="855">
+          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
           <folding />
         </state>
       </provider>
