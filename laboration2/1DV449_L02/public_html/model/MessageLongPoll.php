@@ -13,6 +13,7 @@ require_once("SessionModel.php");
 class MessageLongPoll {
 
     private $database;
+    private $token;
     private static $tablename = "message";
     private static $date = "date";
 
@@ -29,7 +30,8 @@ class MessageLongPoll {
     protected function init() {
 
         $sessionModel = new SessionModel();
-//        var_dump($sessionModel->isLoggedIn());
+        $this->token = $sessionModel->getToken();
+
         if(!$sessionModel->isLoggedIn()) {
 
             return;
@@ -96,6 +98,12 @@ class MessageLongPoll {
 
         $user = $this->fetch('user');
         $text = $this->fetch('text');
+        $clientToken = $this->fetch('token');
+
+        if($clientToken !== $this->token) {
+
+            return;
+        }
 
         if(empty($user) || empty($text)) {
 

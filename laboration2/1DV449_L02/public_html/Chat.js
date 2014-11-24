@@ -38,7 +38,7 @@ function Chat() {
     };
 
 
-    this.postMessage = function(user, text, callback){
+    this.postMessage = function(user, text, token,  callback){
 
         $.ajax({
             'url': 'model/MessageLongPoll.php',
@@ -47,7 +47,8 @@ function Chat() {
             'data': {
                 'mode': 'post',
                 'user': user,
-                'text': text
+                'text': text,
+                'token': token
             },
             'success': function(result) {
 

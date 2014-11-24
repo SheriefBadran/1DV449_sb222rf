@@ -11,6 +11,7 @@ var MessageBoard = {
         MessageBoard.textField = document.getElementById("inputText");
         MessageBoard.nameField = document.getElementById("inputName");
         MessageBoard.messageArea = document.getElementById("messagearea");
+        MessageBoard.tokenField = document.getElementById("token");
 
         // Add eventhandlers
         document.getElementById("inputText").onfocus = function(e){ this.className = "focus"; }
@@ -86,13 +87,14 @@ var MessageBoard = {
 
         var name = MessageBoard.nameField.value;
         var text = MessageBoard.textField.value;
+        var token = MessageBoard.tokenField.value;
 
         var message = new Message();
         message.setUser(name);
         message.setText(text);
         console.log(message.getText());
 
-        chat.postMessage(message.getUser(), message.getText(), function () {
+        chat.postMessage(message.getUser(), message.getText(), token, function () {
 
             console.log('ajax success');
         });
