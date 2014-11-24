@@ -14,6 +14,8 @@ require_once(ModelPath.DS."Validator.php");
 $database = Config::instantiatePDO();
 $messageRepository = new MessageRepository($database);
 
+$validator = new Validator();
+
 if (isset($_POST['username']) && isset($_POST['password'])) {
 
     header("Location:" . $validator->authenticate($_POST['username'], $_POST['password']));

@@ -20,7 +20,6 @@ var MessageBoard = {
         document.getElementById("buttonLogout").onclick = function(e) {MessageBoard.logout(); return false;}
 
         MessageBoard.textField.onkeypress = function(e){
-
             if(!e) var e = window.event;
 
             if(e.keyCode == 13 && !e.shiftKey){
@@ -101,7 +100,7 @@ var MessageBoard = {
     renderMessages: function(){
 
         // Remove all messages
-        MessageBoard.messageArea.innerHTML = "";
+        MessageBoard.messageArea.textContent = "";
 
         // Renders all messages.
         for(var i=0; i < MessageBoard.messages.length; ++i){
@@ -109,7 +108,7 @@ var MessageBoard = {
             MessageBoard.renderMessage(MessageBoard.messages[i]);
         }
 
-        document.getElementById("nrOfMessages").innerHTML = MessageBoard.messages.length;
+        document.getElementById("nrOfMessages").textContent = MessageBoard.messages.length;
     },
     renderMessage: function(message){
         // Message div
@@ -133,13 +132,17 @@ var MessageBoard = {
         div.appendChild(aTag);
 
         // Message text
-        var text = document.createElement("p");
-        text.innerHTML = message.getHTMLText();
-        div.appendChild(text);
+        var pText = document.createElement("p");
+        var pName = pText.cloneNode(true);
+
+        pText.textContent = message.getText();
+        pName.textContent = message.getUser() + ' said: ';
+        div.appendChild(pName);
+        div.appendChild(pText);
 
         // Time - Should fix on server!
         var spanDate = document.createElement("span");
-        spanDate.appendChild(document.createTextNode(message.getDateText()))
+        spanDate.appendChild(document.createTextNode(message.getDate()))
 
         div.appendChild(spanDate);
 
@@ -151,6 +154,7 @@ var MessageBoard = {
         MessageBoard.messageArea.appendChild(div);
     },
     removeMessage: function(messageID){
+
 		if(window.confirm("Vill du verkligen radera meddelandet?")){
 
 			MessageBoard.messages.splice(messageID,1); // Removes the message from the array.
@@ -160,7 +164,7 @@ var MessageBoard = {
     },
     showTime: function(message){
 
-         var time = message.getDateText();
+         var time = message.getDate();
 
 //         var showTime = "Created "+time.toLocaleDateString()+" at "+time.toLocaleTimeString();
 

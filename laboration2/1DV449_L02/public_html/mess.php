@@ -80,7 +80,7 @@ html {background:url(pic/b.jpg);}
     border:2px solid #73880A;
 }
 .message p {
-    display:inline;
+    display:block;
    
 }
 

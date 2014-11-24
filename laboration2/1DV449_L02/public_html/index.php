@@ -5,7 +5,7 @@
         $_SESSION['errors']['username'] = 'hidden-error';
         $_SESSION['errors']['password'] = 'hidden-error';
     }
-
+    var_dump($_SESSION['errors']['username']);
     require_once("../data/pathConfig.php");
     require_once(ModelPath."/UserModel.php");
     require_once(ViewPath.DS."CookieStorage.php");

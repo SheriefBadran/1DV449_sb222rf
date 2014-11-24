@@ -24,7 +24,8 @@ kontrollera användarnamn och lösenord. __Följande säkerhetsbriser är identi
  
  * Sql frågan är parametriserad och körs med PDO.
  * Lösenordet är både saltat och hashat. Användarnamn och lösenord kontrolleras enligt följande:
-   Lösenordet hämtas ut med användarnamnet. Hash av angivet lösenord + salt ska matcha lösenordet i databasen.
+   Lösenordet hämtas ut med användarnamnet. Hash av angivet lösenord + salt ska matcha lösenordet i databasen. Detta sker i validate.php
+   och Validator.php
  
    
 ### Chat
@@ -38,14 +39,18 @@ __Följande säkerhetsbrister är identifierade:__
  * Ingen validering av utdata på klienten? Hur mycket gör json.parse()? 
 
  __Indata__
+ * Inga parametriserade sql frågor
  * Indata skickas till servern via ett ajaxanrop som görs av funktionen sendMessage i filen MessageBoard.js. Indata valideras inte innan
-   den skickas till servern vilket öppnar för xss attacker och sql injection.
+   den skickas till servern vilket öppnar för xss attacker och sql injection. Detta är särskilt allvarligt eftersom data skrivs ut med
+   innerHTML och inte som textContent.
  * Funktionen addToDb() i filen post.php sparar meddelandet till databasen utan validering, vilket öppnar för sql injection samt xss attacker då
    utdata kommer att kunna innehålla skadlig javascript kod.
  
  __Cross Site Request Forgery__
  
- __Åtgärder__
+ __Åtgärder - Indata__
+ * Sql fråga för att lägga lägga in meddelanden i db sker med en pdo anslutning och sql frågan är parametriserad.
+ * XSS åtgärd sker då all data skrivs ut som textContent istället för exempelvis innerHTML.
 
 ## Optimering
 

@@ -6,7 +6,7 @@
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 
 // Define a project root path.
-defined('ProjectRootPath') ? null : define('ProjectRootPath', DS.'Applications'.DS.'MAMP'.DS.'htdocs'.DS.'www'.DS.'git'.DS.'1DV449_sb222rf'.DS.'laboration2'.DS.'1DV449_L02');
+defined('ProjectRootPath') ? null : define('ProjectRootPath', DS.'Applications'.DS.'MAMP'.DS.'htdocs'.DS.'www'.DS.'webbteknik2-lab2'.DS.'1DV449_L02');
 //defined('ROOT_DIR', dirname(__FILE__));
 // defined('ProjectRootPath') ? null : define('ProjectRootPath', DS.'storage'.DS.'content'.DS.'63'.DS.'129463'.DS.'sheriefbadran.com');
 

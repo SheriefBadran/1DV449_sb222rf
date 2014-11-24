@@ -73,13 +73,9 @@ class Validator {
         if ($authenticated === true) {
 
             $sessionModel->setLoginSession();
-            // $_SESSION['login'] = true;
-
             return self::$toChat;
         }
 
         return self::$toLogin;
     }
-}
-
-$validator = new Validator();
+} 

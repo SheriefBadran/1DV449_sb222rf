@@ -17,7 +17,7 @@ function Message(){
             throw {error: "Message author has to be of type string"};
         }
 
-        _user = this.sanitize(user);
+        _user = user;
     };
 
 	this.getText = function() {
@@ -32,7 +32,7 @@ function Message(){
             throw {error: "Message text has to be of type string"};
         }
 
-		_text = this.sanitize(text);
+		_text = text;
 	};
 
 	this.getDate = function() {
@@ -47,7 +47,7 @@ function Message(){
             throw {error: "Message date has to be of type string"};
         }
 
-		_date = this.sanitize(date);
+		_date = date;
 	};
 }
 
@@ -56,17 +56,7 @@ Message.prototype.toString = function(){
 	return this.getText()+" ("+this.getDate()+")";
 }
 
-Message.prototype.getHTMLText = function() {
-
-    return this.getUser() + ' said:' + '<br/>' + this.getText().replace(/[\n\r]/g, "<br />");
-}
-
 Message.prototype.getDateText = function() {
 
     return this.getDate();
-}
-
-Message.prototype.sanitize = function(string) {
-
-   return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
