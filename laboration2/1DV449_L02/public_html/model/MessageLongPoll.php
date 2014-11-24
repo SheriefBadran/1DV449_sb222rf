@@ -1,6 +1,7 @@
 <?php
 
 require_once("../../data/db/PDOdatabase.php");
+require_once("SessionModel.php");
 
 /**
  * Created by IntelliJ IDEA.
@@ -26,6 +27,17 @@ class MessageLongPoll {
     }
 
     protected function init() {
+
+        $sessionModel = new SessionModel();
+//        var_dump($sessionModel->isLoggedIn());
+        if(!$sessionModel->isLoggedIn()) {
+
+            return;
+        }
+
+        // All work with session is done.
+        session_write_close();
+
 
         $mode = $this->fetch('mode');
 

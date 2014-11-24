@@ -17,7 +17,7 @@ var MessageBoard = {
         document.getElementById("inputText").onblur = function(e){ this.className = "blur" }
         document.getElementById("buttonSend").onclick = function(e) {MessageBoard.sendMessage(); return false;}
 //        document.getElementById("buttonSend").onclick = function(e) {MessageBoard.startChat(); return false;}
-        document.getElementById("buttonLogout").onclick = function(e) {MessageBoard.logout(); return false;}
+//        document.getElementById("buttonLogout").onclick = function(e) {MessageBoard.logout(); return false;}
 
         MessageBoard.textField.onkeypress = function(e){
             if(!e) var e = window.event;

@@ -1,15 +1,18 @@
 <?php
-    session_start();
-//	require_once("get.php");
-    require_once("../data/pathConfig.php");
-    require_once(ModelPath.DS."SessionModel.php");
-    $sessionModel = new SessionModel();
 
+    require_once("../data/pathConfig.php");
+    require_once("model/SessionModel.php");
+
+    $sessionModel = new SessionModel();
 
     if (!$sessionModel->isLoggedIn()) {
 
         header("Location: index.php");
     }
+
+    $sessionModel->setToken();
+    $token = $sessionModel->getToken();
+
 ?>
 <!DOCTYPE html>
 <html lang="sv">
@@ -169,6 +172,7 @@ background-color: #F3FCE4;
                 <textarea name="mess" id="inputText" cols="55" rows="6"></textarea>
 
                 <input class="btn btn-primary" type="button"  id="buttonSend" value="Write your message" />
+                <input type="" value="<?php echo $token; ?>" id="token" />
 
 
                 <span class="clear">&nbsp;</span>

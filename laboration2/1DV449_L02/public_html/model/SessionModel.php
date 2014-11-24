@@ -8,9 +8,12 @@
 
 class SessionModel {
 
-    public function getLoginSession() {
+    public function __construct() {
 
-        return $_SESSION['login'];
+//        if(session_id() !== '') {
+
+            session_start();
+//        }
     }
 
     public function isLoggedIn() {
@@ -26,5 +29,21 @@ class SessionModel {
     public function destroyLoginSession() {
 
         unset($_SESSION['login']);
+    }
+
+    public function setToken() {
+
+
+        $_SESSION['token'] = uniqid();
+    }
+
+    public function getToken() {
+
+        if (isset($_SESSION['token'])) {
+
+            return $_SESSION['token'];
+        }
+
+        return false;
     }
 }
