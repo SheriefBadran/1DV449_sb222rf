@@ -34,6 +34,7 @@ class MessageLongPoll {
 
         if(!$sessionModel->isLoggedIn()) {
 
+            $sessionModel->destroyLoginSession();
             return;
         }
 

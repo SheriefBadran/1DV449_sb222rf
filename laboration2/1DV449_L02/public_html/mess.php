@@ -28,120 +28,117 @@
     <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
     <link rel="shortcut icon" href="pic/favicon.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-   
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/longpoll.js"></script>
 
 	<style type="text/css">
 	
 	body{
-    margin:0;
-    padding:0;
-    
-    background-color:#C3D9FF;
-    background-image:url(pic/logo.png);
-    background-repeat:no-repeat;
-    background-position:center top;
-    height:4000px;
-    padding-top:200px;
-    
-    font-family:verdana, helvetica, Sans-Serif;
-    font-size:12px;
-}
+        margin:0;
+        padding:0;
 
-#container {
-  
+        background-color:#C3D9FF;
+        background-image:url(pic/logo.png);
+        background-repeat:no-repeat;
+        background-position:center top;
+        height:4000px;
+        padding-top:200px;
 
-}
+        font-family:verdana, helvetica, Sans-Serif;
+        font-size:12px;
+    }
 
-#messageboard{
-    width:600px;
-    margin:auto;
-    border:1px solid silver;
-    background:white;
-    padding:10px;
-    padding-bottom:20px;
-}
+    #container {
 
 
+    }
 
-#numberOfMess {
-    float:right;
-    font-size:small;
-    color:Gray;
-}
-
-html {background:url(pic/b.jpg);}
-
-.message {
-    width:590px;
-    background-color:#CDEB8B;
-    color:gray;
-    margin-bottom:5px;
-    padding:5px;
-    font-size:22px;
-    border:2px solid #73880A;
-}
-.message p {
-    display:block;
-   
-}
+    #messageboard{
+        width:600px;
+        margin:auto;
+        border:1px solid silver;
+        background:white;
+        padding:10px;
+        padding-bottom:20px;
+    }
 
 
-.message img {
-    float:right;
-    padding-left:5px;
-    border:none;
-}
+
+    #numberOfMess {
+        float:right;
+        font-size:small;
+        color:Gray;
+    }
+
+    html {background:url(pic/b.jpg);}
+
+    .message {
+        width:590px;
+        background-color:#CDEB8B;
+        color:gray;
+        margin-bottom:5px;
+        padding:5px;
+        font-size:22px;
+        border:2px solid #73880A;
+    }
+    .message p {
+        display:block;
+
+    }
 
 
-.message span {
-    display:block;
-    font-size:10px;
-    color:gray;
-    width:100%;
-    padding:0;
-    margin:0;
-    text-align:right;
-
-}
-
-#inputText{
-    width:590px;
-    height:150px;
-    border:1px solid silver;
-    font-family:verdana, helvetica, Sans-Serif;
-    font-size:20px;
-    padding:5px;
-
-}
-
-#inputName {
-	width:300px;
-    height:50px;
-    border:1px solid silver;
-    font-family:verdana, helvetica, Sans-Serif;
-    font-size:20px;
-    padding:5px;
-}
-.blur{
-    background-color: white;
-}
-
-.focus{
-background-color: #F3FCE4;
-}
-
-.clear {
-    clear:both;
-
-}
+    .message img {
+        float:right;
+        padding-left:5px;
+        border:none;
+    }
 
 
-.debug {
-    
+    .message span {
+        display:block;
+        font-size:10px;
+        color:gray;
+        width:100%;
+        padding:0;
+        margin:0;
+        text-align:right;
 
-}
+    }
+
+    #inputText{
+        width:590px;
+        height:150px;
+        border:1px solid silver;
+        font-family:verdana, helvetica, Sans-Serif;
+        font-size:20px;
+        padding:5px;
+
+    }
+
+    #inputName {
+        width:300px;
+        height:50px;
+        border:1px solid silver;
+        font-family:verdana, helvetica, Sans-Serif;
+        font-size:20px;
+        padding:5px;
+    }
+    .blur{
+        background-color: white;
+    }
+
+    .focus{
+    background-color: #F3FCE4;
+    }
+
+    .clear {
+        clear:both;
+
+    }
+
+
+    .debug {
+
+
+    }
 	
 	</style>
 	
@@ -180,13 +177,7 @@ background-color: #F3FCE4;
             </div>
 
         </div>
-        
-        <!-- This script is running to get the messages -->
-			<script>
-//				$(document).ready(function() {
-//					MessageBoard.getMessages();
-//				});
-			</script>
-			<script src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/bootstrap.js"></script>
 	</body>
 	</html>

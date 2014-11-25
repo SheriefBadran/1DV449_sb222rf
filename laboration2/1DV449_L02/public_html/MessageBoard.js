@@ -35,16 +35,18 @@ var MessageBoard = {
 
         chat.getMessage(function(messages) {
 
-            MessageBoard.messages = [];
+            var newMessages = messages.slice(MessageBoard.messages.length, messages.length);
+            console.log(newMessages);
 
+//            MessageBoard.messages = [];
             if(MessageBoard.messages.length < messages.length) {
 
-                for(var i = 0, max = messages.length; i < max; i++) {
+                for(var i = 0, max = newMessages.length; i < max; i++) {
 
                     var message = new Message();
-                    message.setUser(messages[i].name);
-                    message.setText(messages[i].text);
-                    message.setDate(messages[i].date);
+                    message.setUser(newMessages[i].name);
+                    message.setText(newMessages[i].text);
+                    message.setDate(newMessages[i].date);
 
                     MessageBoard.messages.push(message);
                 }
@@ -92,7 +94,6 @@ var MessageBoard = {
         var message = new Message();
         message.setUser(name);
         message.setText(text);
-        console.log(message.getText());
 
         chat.postMessage(message.getUser(), message.getText(), token, function () {
 
@@ -153,7 +154,8 @@ var MessageBoard = {
 
         div.appendChild(spanClear);
 
-        MessageBoard.messageArea.appendChild(div);
+        $(MessageBoard.messageArea).prepend(div);
+//        MessageBoard.messageArea.appendChild(div);
     },
     removeMessage: function(messageID){
 

@@ -47,6 +47,8 @@ __Följande säkerhetsbrister är identifierade:__
    utdata kommer att kunna innehålla skadlig javascript kod.
  
  __Cross Site Request Forgery__
+ * Skydd mot CSRF är implementerat. Ett token är satt på server och i ett gömt fält på klienten. När ett meddelande skickas till servern
+   görs en jämförelse.
  
  __Åtgärder - Indata__
  * Sql fråga för att lägga lägga in meddelanden i db sker med en pdo anslutning och sql frågan är parametriserad.
@@ -54,3 +56,17 @@ __Följande säkerhetsbrister är identifierade:__
 
 ## Optimering
 
+ __Problem1__: mess.php laddar in jquery.js istället för jquery.min.js.
+ 
+  * __Åtgärd:__ mess.php laddar in jquery.min.js.
+  * __Observation innan:__ Svårt att observera relevant tidsåtgång eftersom testet sker lokalt (1ms).
+  * __Observation efter:__ Filen är 176 KB mindre vilket borde ge en viss tidsvinst på en annan server. 
+  * __Resultat:__
+  
+__Problem2__: 
+
+  * __Åtgärd:__
+  * __Observation innan:__
+  * __Observation efter:__
+  * __Resultat:__
+    
