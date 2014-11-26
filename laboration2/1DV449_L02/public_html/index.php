@@ -1,10 +1,6 @@
 <?php
     session_start();
-
     require_once("../data/pathConfig.php");
-    require_once(ModelPath."/UserModel.php");
-    require_once(ViewPath.DS."CookieStorage.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +16,7 @@
     <title>Mezzy Labbage - Log in</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
   </head>
   <body>

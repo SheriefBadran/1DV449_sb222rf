@@ -7,9 +7,7 @@
  */
 require_once("../data/pathConfig.php");
 require_once(HelperPath.DS."db".DS."config.php");
-require_once(ModelPath.DS."MessageRepository.php");
 require_once(ModelPath.DS."SessionModel.php");
-require_once(ViewPath.DS."CookieStorage.php");
 
 session_start();
 
