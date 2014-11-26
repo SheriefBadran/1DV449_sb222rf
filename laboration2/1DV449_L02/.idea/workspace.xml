@@ -106,8 +106,8 @@
       <file leaf-file-name="MessageLongPoll.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6640625" vertical-offset="0" max-vertical-offset="2535">
-              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.8671875" vertical-offset="0" max-vertical-offset="2535">
+              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -547,12 +547,12 @@
       <workItem from="1416320389504" duration="116883000" />
       <workItem from="1416659482853" duration="4637000" />
       <workItem from="1416750190557" duration="28128000" />
-      <workItem from="1416833435416" duration="65775000" />
+      <workItem from="1416833435416" duration="65958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219389000" />
+    <option name="totallyTimeSpent" value="219572000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -958,8 +958,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6640625" vertical-offset="0" max-vertical-offset="2535">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.8671875" vertical-offset="0" max-vertical-offset="2535">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
           <folding />
         </state>
       </provider>
