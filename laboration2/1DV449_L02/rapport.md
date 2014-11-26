@@ -114,5 +114,31 @@ endast skriver ut de nya meddelanderna till användaren.
 
 __Totalt har alla statiska resurser minimerats från 1100 KB till 165 KB.__
  
-  
-  
+
+## Longpolling
+
+__Implementation:__ 
+
+__Referens:__ http://portal.bluejack.binus.ac.id/tutorials/webchatapplicationusinglong-pollingtechnologywithphpandajax.
+Jag använde mig av ovanstående tutorial för att komma igång med implementationen av longpolling.
+
+Javascriptklassen Chat.js kör ajaxanrop för att posta och hämta meddelanden till/från databasen. Chat instatieras i
+MessageBoard.js där där chatten "startas". En hämtning av meddelandena görs då chat.getMessages() körs. Ajax anropet gör en POST och 
+skickar med data om att meddelanden ska hämtas samt en timestamp för senaste meddelandet. Funktionen getMessage() körs på server sidan, och
+en while loop med en endtime på 20 sekunder exekveras. Alla meddelanden i databasen hämtas ut och timestamp för det senaste skrivna meddelandet
+jämförs med dem timestamp som skickades från klienten. Om dessa inte är lika med varandra har nya meddelanden skrivits och servern skickar
+ett json svar till klienten, sedan bryts while loopen och allt börjar om. Om timestamps som jämförs med varandra i while loopen betyder det att
+inget nytt meddelande skrivits och loppen fortsätter köras.
+
+__Fördelar:__
+
+ * Fördelarna med implementationen till skillnad från exempelvis polling är att det är mindre krävande att hålla en lina öppen i
+   20 sekunder istället för att göra skjuta förfrågningar mot databasen varannan sekund.
+ * Klassen MessageLongPolling.php är lätt att hantera och skala upp. Uppdelningen av olika ansvarsområden som sker i metoderna init(), fetch() och 
+   output() gör att klassen är lätt att använda.
+   
+__Nackdelar:__
+
+ * Metoden getMessage() i klassen MessageLongPolling.php hämtar ut alla meddelanden från databasen istället för endast de nya meddelandena som
+   ska presenteras på klienten, vilket är en oeffektiv lösning.
+

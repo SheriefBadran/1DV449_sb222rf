@@ -88,6 +88,7 @@ var MessageBoard = {
         document.getElementById("nrOfMessages").textContent = MessageBoard.messages.length;
     },
     renderMessage: function(message){
+
         // Message div
         var div = document.createElement("div");
         div.className = "message";
@@ -119,7 +120,7 @@ var MessageBoard = {
 
         // Time - Should fix on server!
         var spanDate = document.createElement("span");
-        spanDate.appendChild(document.createTextNode(message.getDate()))
+        spanDate.appendChild(document.createTextNode(message.getDate()));
 
         div.appendChild(spanDate);
 

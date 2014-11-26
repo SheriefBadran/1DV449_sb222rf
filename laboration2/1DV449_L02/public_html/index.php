@@ -23,13 +23,12 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/login.css" rel="stylesheet">
   </head>
-
   <body>
     <div class="container">
       <form class="form-signin" action="validate.php" method="POST">
         <h2 class="form-signin-heading">Log in</h2>
-        <input value="" name="username" type="text" class="form-control <?php echo $_SESSION['errors']['username'] ?>" placeholder="Användarnamn" autofocus>
-        <input value="" name="password" type="password" class="form-control <?php echo $_SESSION['errors']['password'] ?>" placeholder="Password">
+        <input value="" name="username" type="text" class="form-control" placeholder="Användarnamn" autofocus>
+        <input value="" name="password" type="password" class="form-control" placeholder="Password">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
       </form>
     </div>
