@@ -42,7 +42,7 @@ class MessageLongPoll {
 
         switch($mode){
             case 'get':
-                $this->getMessage();
+                $this->getMessages();
                 break;
             case 'post':
                 $this->postMessage();
@@ -54,7 +54,7 @@ class MessageLongPoll {
         return;
     }
 
-    protected function getMessage() {
+    protected function getMessages() {
 
         $endtime = time() + 20;
         $lasttime = $this->fetch('lastTime');

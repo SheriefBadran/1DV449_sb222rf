@@ -38,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rapport.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="rapport.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rapport.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.4134614" vertical-offset="0" max-vertical-offset="2250">
-              <caret line="142" column="63" selection-start-line="142" selection-start-column="63" selection-end-line="142" selection-end-column="63" />
+            <state vertical-scroll-proportion="-17.222221" vertical-offset="0" max-vertical-offset="2250">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MessageLongPoll.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MessageLongPoll.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.791666" vertical-offset="530" max-vertical-offset="2535">
-              <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
+            <state vertical-scroll-proportion="1.6640625" vertical-offset="0" max-vertical-offset="2535">
+              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -182,7 +182,6 @@
         <option value="$PROJECT_DIR$/public_html/post.php" />
         <option value="$PROJECT_DIR$/public_html/validate.php" />
         <option value="$PROJECT_DIR$/data/db/config.php" />
-        <option value="$PROJECT_DIR$/public_html/model/MessageLongPoll.php" />
         <option value="$PROJECT_DIR$/data/db/PDOdatabase.php" />
         <option value="$PROJECT_DIR$/public_html/model/Validator.php" />
         <option value="$PROJECT_DIR$/public_html/css/message.css" />
@@ -190,6 +189,7 @@
         <option value="$PROJECT_DIR$/public_html/MessageBoard.js" />
         <option value="$PROJECT_DIR$/public_html/mess.php" />
         <option value="$PROJECT_DIR$/rapport.md" />
+        <option value="$PROJECT_DIR$/public_html/model/MessageLongPoll.php" />
       </list>
     </option>
   </component>
@@ -547,12 +547,12 @@
       <workItem from="1416320389504" duration="116883000" />
       <workItem from="1416659482853" duration="4637000" />
       <workItem from="1416750190557" duration="28128000" />
-      <workItem from="1416833435416" duration="65430000" />
+      <workItem from="1416833435416" duration="65775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219044000" />
+    <option name="totallyTimeSpent" value="219389000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -583,6 +583,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32867134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -602,7 +603,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -937,14 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.791666" vertical-offset="530" max-vertical-offset="2535">
-          <caret line="83" column="29" selection-start-line="83" selection-start-column="29" selection-end-line="83" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public_html/MessageBoard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-39.807693" vertical-offset="795" max-vertical-offset="2190">
@@ -955,13 +947,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rapport.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.4134614" vertical-offset="0" max-vertical-offset="2250">
-          <caret line="142" column="63" selection-start-line="142" selection-start-column="63" selection-end-line="142" selection-end-column="63" />
+        <state vertical-scroll-proportion="-17.222221" vertical-offset="0" max-vertical-offset="2250">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
           <folding />
         </state>
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public_html/model/MessageLongPoll.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6640625" vertical-offset="0" max-vertical-offset="2535">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
