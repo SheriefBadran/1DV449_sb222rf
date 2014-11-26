@@ -16,10 +16,8 @@ session_start();
 
 class Validator {
 
-    private $sessionModel;
     private static $authenticationTable = 'user';
     private static $uniqueId = 'uniqueId';
-    private static $username = 'username';
     private static $password = 'password';
     private static $toLogin = 'index.php';
     private static $toChat = 'mess.php';
@@ -29,45 +27,28 @@ class Validator {
         $sessionModel = new SessionModel();
         $database = Config::instantiatePDO();
         $authenticated = false;
-        $validated = true;
 
-        if ($username === '') {
+        try {
 
-            $validated = false;
-            $_SESSION['errors']['username'] = 'error-shown';
-        }
+            $db = $database->connection();
 
-        if ($password === '') {
+            $sql = "SELECT " . self::$uniqueId . ", " . self::$password  .
+                " FROM " . self::$authenticationTable . " WHERE username = ?";
 
-            $validated = false;
-            $_SESSION['errors']['password'] = 'error-shown';
-        }
-
-
-        if ($validated) {
-
-            try {
-
-                $db = $database->connection();
-
-                $sql = "SELECT " . self::$uniqueId . ", " . self::$password  .
-                    " FROM " . self::$authenticationTable . " WHERE username = ?";
-
-                $params = array($username);
-                $query = $db->prepare($sql);
-                $query->execute($params);
-                $result = $query->fetch();
+            $params = array($username);
+            $query = $db->prepare($sql);
+            $query->execute($params);
+            $result = $query->fetch();
 
 
-                if ( hash('sha256', $result[self::$uniqueId].$password) === $result[self::$password] ) {
+            if ( hash('sha256', $result[self::$uniqueId].$password) === $result[self::$password] ) {
 
-                    $authenticated = true;
-                }
+                $authenticated = true;
             }
-            catch (PDOException $e) {
+        }
+        catch (PDOException $e) {
 
-                throw new \Exception($e->getMessage(), (int)$e->getCode());
-            }
+            die("Could not connect.");
         }
 
         if ($authenticated === true) {

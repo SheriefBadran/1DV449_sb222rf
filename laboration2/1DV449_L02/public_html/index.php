@@ -1,11 +1,6 @@
 <?php
     session_start();
-    if(!isset($_SESSION['errors'])) {
 
-        $_SESSION['errors']['username'] = 'hidden-error';
-        $_SESSION['errors']['password'] = 'hidden-error';
-    }
-    var_dump($_SESSION['errors']['username']);
     require_once("../data/pathConfig.php");
     require_once(ModelPath."/UserModel.php");
     require_once(ViewPath.DS."CookieStorage.php");
@@ -37,8 +32,7 @@
         <input value="" name="password" type="password" class="form-control <?php echo $_SESSION['errors']['password'] ?>" placeholder="Password">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
       </form>
-    </div> <!-- /container -->
-    <script src="js/bootstrap.js"></script>
+    </div>
   </body>
 </html>
 

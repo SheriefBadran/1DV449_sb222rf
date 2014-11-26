@@ -27,9 +27,14 @@
     <link rel="apple-touch-icon" sizes="120x120" href="touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad-retina.png">
     <link rel="shortcut icon" href="pic/favicon.png">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 
 	<style type="text/css">
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
 	
 	body{
         margin:0;
@@ -68,8 +73,6 @@
         color:Gray;
     }
 
-    html {background:url(pic/b.jpg);}
-
     .message {
         width:590px;
         background-color:#CDEB8B;
@@ -81,7 +84,6 @@
     }
     .message p {
         display:block;
-
     }
 
 
@@ -121,37 +123,18 @@
         font-size:20px;
         padding:5px;
     }
-    .blur{
-        background-color: white;
-    }
-
-    .focus{
-    background-color: #F3FCE4;
-    }
 
     .clear {
+
         clear:both;
-
-    }
-
-
-    .debug {
-
-
     }
 	
 	</style>
-	
-	<script src="js/jquery.js"></script>
-    <script src="Chat.js"></script>
-    <script src="Message.js"></script>
-	<script src="MessageBoard.js"></script>
-	<script src="js/script.js"></script>
     
 	<title>Messy Labbage</title>
   </head>
 	  
-	  	<body background="http://www.lockley.net/backgds/big_leo_minor.jpg">        
+	  	<body>
 
         <div id="container">
             
@@ -161,23 +144,24 @@
                     <input class="btn btn-danger" type="submit" id="buttonLogout" value="Logout" style="margin-bottom: 20px;" />
                 </form>
 
-                <div id="messagearea"></div>
-                
                 <p id="numberOfMess">Antal meddelanden: <span id="nrOfMessages">0</span></p>
                 Name:<br /> <input id="inputName" type="text" name="name" /><br />
                 Message: <br />
                 <textarea name="mess" id="inputText" cols="55" rows="6"></textarea>
 
                 <input class="btn btn-primary" type="button"  id="buttonSend" value="Write your message" />
-                <input type="" value="<?php echo $token; ?>" id="token" />
-
-
+                <input type="hidden" value="<?php echo $token; ?>" id="token" />
+                <br />
+                <br />
+                <div id="messagearea"></div>
                 <span class="clear">&nbsp;</span>
 
             </div>
 
         </div>
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-        <script src="js/bootstrap.js"></script>
+        <script src="Chat.js"></script>
+        <script src="Message.js"></script>
+        <script src="MessageBoard.js"></script>
+        <script src="js/jquery-1.10.2.min.js"></script>
 	</body>
 	</html>

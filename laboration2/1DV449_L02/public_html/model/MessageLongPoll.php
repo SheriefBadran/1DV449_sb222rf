@@ -1,6 +1,6 @@
 <?php
-
 require_once("../../data/db/PDOdatabase.php");
+require_once("../../data/db/config.php");
 require_once("SessionModel.php");
 
 /**
@@ -17,13 +17,9 @@ class MessageLongPoll {
     private static $tablename = "message";
     private static $date = "date";
 
-    private static $username = "root";
-    private static $password = "root";
-    private static $connectionstring = "mysql:host=localhost;dbname=PhotoGallery";
-
     public function __construct() {
 
-        $this->database = new PDODatabase(self::$username, self::$password, self::$connectionstring);
+        $this->database = Config::instantiatePDO();
         $this->init();
     }
 

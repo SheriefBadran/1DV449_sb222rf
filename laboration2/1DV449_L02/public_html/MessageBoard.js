@@ -17,8 +17,6 @@ var MessageBoard = {
         document.getElementById("inputText").onfocus = function(e){ this.className = "focus"; }
         document.getElementById("inputText").onblur = function(e){ this.className = "blur" }
         document.getElementById("buttonSend").onclick = function(e) {MessageBoard.sendMessage(); return false;}
-//        document.getElementById("buttonSend").onclick = function(e) {MessageBoard.startChat(); return false;}
-//        document.getElementById("buttonLogout").onclick = function(e) {MessageBoard.logout(); return false;}
 
         MessageBoard.textField.onkeypress = function(e){
             if(!e) var e = window.event;
@@ -38,7 +36,6 @@ var MessageBoard = {
             var newMessages = messages.slice(MessageBoard.messages.length, messages.length);
             console.log(newMessages);
 
-//            MessageBoard.messages = [];
             if(MessageBoard.messages.length < messages.length) {
 
                 for(var i = 0, max = newMessages.length; i < max; i++) {
@@ -56,40 +53,17 @@ var MessageBoard = {
             MessageBoard.renderMessages();
         });
     },
-    getMessages: function() {
-//        console.log("INNE");
-//
-//        $.ajax({
-//			type: "get",
-//			url: "functions.php",
-//			data: {function: "getMessages"}
-//		}).done(function(data) { // called when the AJAX call is ready
-//
-//			data = JSON.parse(data);
-//
-//
-//			for(var mess in data) {
-//				var obj = data[mess];
-//			    var text = obj.name +" said:\n" +obj.message;
-//				var mess = new Message(text, new Date());
-//                var messageID = MessageBoard.messages.push(mess)-1;
-//
-//                MessageBoard.renderMessage(messageID);
-//
-//			}
-//			document.getElementById("nrOfMessages").innerHTML = MessageBoard.messages.length;
-//
-//		});
-
-
-    },
     sendMessage:function(){
 
         if(MessageBoard.textField.value == "") return;
 
+
         var name = MessageBoard.nameField.value;
         var text = MessageBoard.textField.value;
         var token = MessageBoard.tokenField.value;
+
+        MessageBoard.nameField.value = '';
+        MessageBoard.textField.value = '';
 
         var message = new Message();
         message.setUser(name);
@@ -155,28 +129,12 @@ var MessageBoard = {
         div.appendChild(spanClear);
 
         $(MessageBoard.messageArea).prepend(div);
-//        MessageBoard.messageArea.appendChild(div);
-    },
-    removeMessage: function(messageID){
-
-		if(window.confirm("Vill du verkligen radera meddelandet?")){
-
-			MessageBoard.messages.splice(messageID,1); // Removes the message from the array.
-
-			MessageBoard.renderMessages();
-        }
     },
     showTime: function(message){
 
          var time = message.getDate();
-
-//         var showTime = "Created "+time.toLocaleDateString()+" at "+time.toLocaleTimeString();
-
          alert(time);
     }
-//    logout: function() {
-//        window.location = "index.php";
-//    }
 }
 
 window.onload = MessageBoard.init;

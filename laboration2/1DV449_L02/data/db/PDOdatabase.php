@@ -32,11 +32,4 @@ class PDODatabase {
 
         return $this->connection;
     }
-
-    public function authenticate($username, $password, $authenticationTable) {
-
-
-    }
-
-
 } 

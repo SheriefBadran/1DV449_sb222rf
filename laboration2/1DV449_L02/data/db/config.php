@@ -1,7 +1,5 @@
 <?php
 
-    require_once("../data/pathConfig.php");
-    require_once(HelperPath.DS."db".DS."PDOdatabase.php");
     class Config {
 
         public static $username = "root";
