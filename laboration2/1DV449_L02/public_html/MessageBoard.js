@@ -56,6 +56,7 @@ var MessageBoard = {
     sendMessage:function(){
 
         if(MessageBoard.textField.value == "") return;
+        if(MessageBoard.nameField.value == "") return;
 
 
         var name = MessageBoard.nameField.value;
