@@ -44,19 +44,12 @@ var io = require('socket.io').listen(server);
 
 io.sockets.on('connection', function(client) {
 
-    client.emit('news', {hello: 'sending news from server'});
+    client.emit('load', JSON.parse(fs.readFileSync('traffic.json')));
     client.on('test', function (data) {
 
         console.log(data);
     });
 });
-
-
-
-//app.get('/api', function(request, response) {
-//
-//    response.sendFile(__dirname+'/app/index.html');
-//});
 
 
 // Get a list of all messages
