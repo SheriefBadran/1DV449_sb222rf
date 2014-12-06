@@ -5,30 +5,25 @@ window.onload = init;
 
 function init() {
 
+    var doc = document;
     var listHandler = TRAFFIC.dom.listRenderer;
+    var dataHandler = TRAFFIC.data.dataHandler;
+
     var isFirstLoad = true;
-    var ul = document.querySelector('#traffic-message-list');
+    var dataCategories;
+    var ul = doc.querySelector('#traffic-message-list');
+    var selectList = doc.querySelector('#select-list select');
     //renderList();
     var socket = io.connect('http://localhost:8000');
 
     socket.on('load', function (data) {
 
-        renderer.markerData = [];
-        renderer.roadData = [];
-        renderer.publicTransData = [];
-        renderer.disruptionData = [];
-        renderer.other = [];
-
         console.log(data);
+        dataHandler.clearCategories();
+        dataHandler.setMarkerData(data['messages']);
 
-        socket.emit('test', {my: 'sending news from client'});
-
-        renderer.markerData = renderer.getRelevantArray(data['messages']);
-
-        // Populate category arrays
-        renderer.populateCategoryArrays(renderer.markerData);
-
-        var selectList = document.querySelector('#select-list select');
+        var makerData = dataHandler.getMarkerData();
+        dataCategories = dataHandler.populateCategoryArrays(makerData);
 
         selectList.addEventListener('change', function (e) {
 
@@ -40,34 +35,34 @@ function init() {
                 case 0:
                     //google.maps.event.removeDomListener(ul, 'click', listMarkerEventCallback);
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(renderer.arrangeData(renderer.roadData));
+                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.roadData));
                     break;
 
                 case 1:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(renderer.arrangeData(renderer.publicTransData));
+                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.publicTransData));
                     break;
 
                 case 2:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(renderer.arrangeData(renderer.disruptionData));
+                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.disruptionData));
                     break;
 
                 case 3:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(renderer.arrangeData(renderer.other));
+                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.other));
                     break;
 
                 case 4:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(renderer.arrangeData(renderer.markerData));
+                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.markerData));
                     break;
             }
         }, false);
 
         if (isFirstLoad) {
 
-            renderer.createMarkers(renderer.arrangeData(renderer.markerData));
+            renderer.createMarkers(dataHandler.arrangeData(dataCategories.markerData));
             isFirstLoad = false;
         };
     });
@@ -77,17 +72,12 @@ function init() {
     var renderer = {
 
         markers: [],
-        roadData: [],
-        publicTransData: [],
-        disruptionData: [],
-        other: [],
-        markerData: [],
         trafficMessageList: document.querySelector('#traffic-message-list'),
         listenerHandle: null,
 
         createMarkers: function (markerData) {
 
-            // Clear markers is an own function.
+            // Clear markers - break out.
             renderer.markers.forEach(function (listMarkerObj) {
                 listMarkerObj.marker.setMap(null);
             });
@@ -99,6 +89,7 @@ function init() {
             var li;
             markerData.forEach(function (markerObj, i) {
 
+// Break out the creation part - START HERE
                 var infoMarkup = new infoWindowContent(markerObj);
                 var markup = infoMarkup.getInfoMarkup();
 
@@ -111,9 +102,12 @@ function init() {
                         content: markup
                     })
                 });
+// CREATION ENDS HERE
 
                 //var li = renderList(marker, i);
                 var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
+
+
                 var listMarkerObj = {
                     marker: marker,
                     li: li
@@ -134,63 +128,6 @@ function init() {
                     prevClickedMarker = marker;
 
                 });
-                //li = renderList(marker);
-                //google.maps.event.addDomListener(li, 'click', function(e) {
-                //
-                //    // Prevent a href action to be called.
-                //    e.preventDefault();
-                //    google.maps.event.trigger(marker, 'click');
-                //});
-            });
-        },
-
-
-        getRelevantArray: function (array) {
-
-            var relevantArray = array.map(function (message, i) {
-
-                //console.log(trafficMessage);
-                return {
-                    latitude: message.latitude,
-                    longitude: message.longitude,
-                    title: message.title,
-                    description: message.description,
-                    createddate: message.createddate,
-                    category: message.category,
-                    subcategory: message.subcategory
-                };
-            });
-
-            return relevantArray;
-        },
-
-
-        arrangeData: function (array) {
-
-            return array.reverse().slice(0, 100);
-        },
-
-
-        populateCategoryArrays: function (array) {
-
-            array.forEach(function (trafficMessage) {
-
-                switch (trafficMessage['category']) {
-                    case 0:
-                        renderer.roadData.push(trafficMessage);
-                        break;
-                    case 1:
-                        renderer.publicTransData.push(trafficMessage);
-                        break;
-                    case 2:
-                        renderer.disruptionData.push(trafficMessage);
-                        break;
-                    case 3:
-                        renderer.other.push(trafficMessage);
-                        break;
-                    default :
-                        break;
-                }
             });
         }
     };
@@ -214,13 +151,13 @@ function init() {
         var target = e.target,
             nodeName = target.nodeName.toLocaleLowerCase();
 
-        var marker = renderer.markers[target.id].marker;
+        if (nodeName !== 'a') {
 
-
-        if (nodeName === 'a' || nodeName == 'li') {
-
-            google.maps.event.trigger(marker, 'click');
+            return;
         };
+
+        var marker = renderer.markers[target.id].marker;
+        google.maps.event.trigger(marker, 'click');
         //google.maps.event.trigger(marker, 'click');
     };
 }
