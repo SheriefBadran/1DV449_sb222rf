@@ -5,8 +5,10 @@ window.onload = init;
 
 function init() {
 
+    var listHandler = TRAFFIC.dom.listRenderer;
     var isFirstLoad = true;
-    renderList();
+    var ul = document.querySelector('#traffic-message-list');
+    //renderList();
     var socket = io.connect('http://localhost:8000');
 
     socket.on('load', function (data) {
@@ -36,18 +38,28 @@ function init() {
             switch (e.target.options.selectedIndex) {
 
                 case 0:
+                    //google.maps.event.removeDomListener(ul, 'click', listMarkerEventCallback);
+                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
                     renderer.createMarkers(renderer.arrangeData(renderer.roadData));
                     break;
+
                 case 1:
+                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
                     renderer.createMarkers(renderer.arrangeData(renderer.publicTransData));
                     break;
+
                 case 2:
+                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
                     renderer.createMarkers(renderer.arrangeData(renderer.disruptionData));
                     break;
+
                 case 3:
+                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
                     renderer.createMarkers(renderer.arrangeData(renderer.other));
                     break;
+
                 case 4:
+                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
                     renderer.createMarkers(renderer.arrangeData(renderer.markerData));
                     break;
             }
@@ -56,7 +68,6 @@ function init() {
         if (isFirstLoad) {
 
             renderer.createMarkers(renderer.arrangeData(renderer.markerData));
-            renderList(renderer.arrangeData(renderer.markerData));
             isFirstLoad = false;
         };
     });
@@ -72,14 +83,17 @@ function init() {
         other: [],
         markerData: [],
         trafficMessageList: document.querySelector('#traffic-message-list'),
-        addMarker: function () {
+        listenerHandle: null,
 
-        },
         createMarkers: function (markerData) {
 
-            renderer.markers.forEach(function (marker) {
-                marker.setMap(null);
+            // Clear markers is an own function.
+            renderer.markers.forEach(function (listMarkerObj) {
+                listMarkerObj.marker.setMap(null);
             });
+            renderer.markers = [];
+
+            renderer.listenerHandle = google.maps.event.addDomListener(ul, 'click', listMarkerEventCallback);
 
             var prevClickedMarker;
             var li;
@@ -98,7 +112,13 @@ function init() {
                     })
                 });
 
-                renderer.markers.push(marker);
+                //var li = renderList(marker, i);
+                var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
+                var listMarkerObj = {
+                    marker: marker,
+                    li: li
+                };
+                renderer.markers.push(listMarkerObj);
 
                 google.maps.event.addListener(marker, 'click', function () {
 
@@ -114,15 +134,17 @@ function init() {
                     prevClickedMarker = marker;
 
                 });
-                li = renderList(marker);
-                google.maps.event.addDomListener(li, 'click', function(e) {
-
-                    // Prevent a href action to be called.
-                    e.preventDefault();
-                    google.maps.event.trigger(marker, 'click');
-                });
+                //li = renderList(marker);
+                //google.maps.event.addDomListener(li, 'click', function(e) {
+                //
+                //    // Prevent a href action to be called.
+                //    e.preventDefault();
+                //    google.maps.event.trigger(marker, 'click');
+                //});
             });
         },
+
+
         getRelevantArray: function (array) {
 
             var relevantArray = array.map(function (message, i) {
@@ -141,10 +163,14 @@ function init() {
 
             return relevantArray;
         },
+
+
         arrangeData: function (array) {
 
             return array.reverse().slice(0, 100);
         },
+
+
         populateCategoryArrays: function (array) {
 
             array.forEach(function (trafficMessage) {
@@ -180,33 +206,21 @@ function init() {
 
     var mapHolder = document.querySelector('#map');
     map = new google.maps.Map(mapHolder, mapOptions);
-}
 
-function createMarkerArray() {
+    var listMarkerEventCallback = function(e) {
 
-    return markerArray;
-}
+        // Prevent a href action to be called.
+        e.preventDefault();
+        var target = e.target,
+            nodeName = target.nodeName.toLocaleLowerCase();
+
+        var marker = renderer.markers[target.id].marker;
 
 
-var renderList = function() {
+        if (nodeName === 'a' || nodeName == 'li') {
 
-    // Initial one time procedure
-    var doc = document;
-    var ul = doc.querySelector('#traffic-message-list');
-    var liOrigin = doc.createElement('li');
-    var aOrigin = doc.createElement('a');
-    var li;
-    var a;
-
-    renderList = function(marker) {
-
-        li = liOrigin.cloneNode(true);
-        a = aOrigin.cloneNode(true);
-        a.setAttribute('href', '');
-        a.textContent = marker.title;
-        li.appendChild(a);
-        ul.appendChild(li);
-
-        return li;
+            google.maps.event.trigger(marker, 'click');
+        };
+        //google.maps.event.trigger(marker, 'click');
     };
-};
+}

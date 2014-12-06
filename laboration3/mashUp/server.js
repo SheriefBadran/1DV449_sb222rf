@@ -80,7 +80,7 @@ var getTrafficEvents = function () {
 };
 
 getTrafficEvents();
-setInterval(getTrafficEvents, 20000);
+setInterval(getTrafficEvents, 300000);
 
 io.sockets.on('connection', function (client) {
 
