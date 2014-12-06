@@ -5,10 +5,19 @@ window.onload = init;
 
 function init() {
 
+    var isFirstLoad = true;
     renderList();
     var socket = io.connect('http://localhost:8000');
 
     socket.on('load', function (data) {
+
+        renderer.markerData = [];
+        renderer.roadData = [];
+        renderer.publicTransData = [];
+        renderer.disruptionData = [];
+        renderer.other = [];
+
+        console.log(data);
 
         socket.emit('test', {my: 'sending news from client'});
 
@@ -44,8 +53,12 @@ function init() {
             }
         }, false);
 
-        renderer.createMarkers(renderer.arrangeData(renderer.markerData));
-        renderList(renderer.arrangeData(renderer.markerData));
+        if (isFirstLoad) {
+
+            renderer.createMarkers(renderer.arrangeData(renderer.markerData));
+            renderList(renderer.arrangeData(renderer.markerData));
+            isFirstLoad = false;
+        };
     });
 
 
