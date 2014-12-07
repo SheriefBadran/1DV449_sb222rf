@@ -20,10 +20,14 @@ function init() {
 
         console.log(data);
         dataHandler.clearCategories();
+        //var sortedData = dataHandler.arrangeData(data['messages']);
+        //console.log(sortedData);
         dataHandler.setMarkerData(data['messages']);
 
-        var makerData = dataHandler.getMarkerData();
-        dataCategories = dataHandler.populateCategoryArrays(makerData);
+        var markerData = dataHandler.getMarkerData();
+        //var timeStamp = parseInt(markerData[0].createddate.replace("/Date(", "").replace(")/",""), 10);
+        //console.log(timeStamp);
+        dataCategories = dataHandler.populateCategoryArrays(markerData);
 
         selectList.addEventListener('change', function (e) {
 
@@ -33,36 +37,35 @@ function init() {
             switch (e.target.options.selectedIndex) {
 
                 case 0:
-                    //google.maps.event.removeDomListener(ul, 'click', listMarkerEventCallback);
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.roadData));
+                    renderer.createMarkers(dataCategories.roadData);
                     break;
 
                 case 1:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.publicTransData));
+                    renderer.createMarkers(dataCategories.publicTransData);
                     break;
 
                 case 2:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.disruptionData));
+                    renderer.createMarkers(dataCategories.disruptionData);
                     break;
 
                 case 3:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.other));
+                    renderer.createMarkers(dataCategories.other);
                     break;
 
                 case 4:
                     if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataHandler.arrangeData(dataCategories.markerData));
+                    renderer.createMarkers(dataCategories.markerData);
                     break;
             }
         }, false);
 
         if (isFirstLoad) {
 
-            renderer.createMarkers(dataHandler.arrangeData(dataCategories.markerData));
+            renderer.createMarkers(dataCategories.markerData);
             isFirstLoad = false;
         };
     });
@@ -86,7 +89,6 @@ function init() {
             renderer.listenerHandle = google.maps.event.addDomListener(ul, 'click', listMarkerEventCallback);
 
             var prevClickedMarker;
-            var li;
             markerData.forEach(function (markerObj, i) {
 
 // Break out the creation part - START HERE
@@ -104,7 +106,6 @@ function init() {
                 });
 // CREATION ENDS HERE
 
-                //var li = renderList(marker, i);
                 var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
 
 

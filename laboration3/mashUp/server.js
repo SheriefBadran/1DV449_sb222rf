@@ -19,9 +19,7 @@ if ('development' == env) {
     app.use(morgan('dev'));
     app.use(bodyParser());
     app.use(errorHandler({dumpExceptions: true, showStack: true}));
-}
-;
-
+};
 
 //Start server
 var ipaddr = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
@@ -85,7 +83,6 @@ setInterval(getTrafficEvents, 300000);
 io.sockets.on('connection', function (client) {
 
     client.emit('load', parse);
-
 });
 
 

@@ -3,9 +3,8 @@
  */
 function infoWindowContent (markerObj) {
 
-
     var title = markerObj.title == '' ? 'Titel saknas' : markerObj.title;
-    var date = new Date(parseInt(markerObj.createddate.replace("/Date(", "").replace(")/",""), 10));
+    var date = new Date(markerObj.createddate);
     var description = markerObj.description == '' ? 'Beskrivning saknas.' : markerObj.description;
     var subCategory = markerObj.subcategory == '' ? 'Underkategori saknas.' : markerObj.subcategory;
 
