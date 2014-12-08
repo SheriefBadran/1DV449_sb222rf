@@ -57,28 +57,35 @@ var getTrafficEvents = function () {
     request('http://api.sr.se/api/v2/traffic/messages?format=json&indent=true&size=1000', function (error, response, body) {
 
         if (!error && response.statusCode == 200) {
+            var jsonData = JSON.parse(body);
+            if (JSON.stringify(parse) !== JSON.stringify(jsonData)) {
 
-            try {
-                var jsonData = JSON.parse(body);
-                parse = jsonData;
-                io.sockets.emit('load', jsonData);
-                fs.writeFile('traffic.json', body, function (err) {
+                console.log('new data');
+                try {
+                    parse = jsonData;
+                    io.sockets.emit('load', jsonData);
+                    fs.writeFile('traffic.json', body, function (err) {
 
-                    if (err) {
-                        throw err;
-                    };
-                });
+                        if (err) {
+                            throw err;
+                        };
+                    });
+                }
+                catch (e) {
+
+                    fs.writeFile('traffic.json', "{}");
+                }
             }
-            catch (e) {
+            else {
 
-                fs.writeFile('traffic.json', "{}");
+                console.log('no new data');
             }
         }
     });
 };
 
 getTrafficEvents();
-setInterval(getTrafficEvents, 300000);
+setInterval(getTrafficEvents, 20000);
 
 io.sockets.on('connection', function (client) {
 

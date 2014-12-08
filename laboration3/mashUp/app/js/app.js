@@ -8,11 +8,22 @@ function init() {
     var doc = document;
     var listHandler = TRAFFIC.dom.listRenderer;
     var dataHandler = TRAFFIC.data.dataHandler;
+    var mapRenderer = TRAFFIC.google.maps.mapRenderer;
+    var markerRenderer = TRAFFIC.google.maps.markerRenderer;
 
     var isFirstLoad = true;
     var dataCategories;
     var ul = doc.querySelector('#traffic-message-list');
-    var selectList = doc.querySelector('#select-list select');
+    var selectList = doc.querySelector('#select-list');
+
+    var mapOptions = {
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var mapHolder = document.querySelector('#map');
+    mapRenderer.renderGoogleMap({latitude: 56.66282, longitude: 16.35524}, mapOptions, mapHolder);
+    map = mapRenderer.getMap();
     //renderList();
     var socket = io.connect('http://localhost:8000');
 
@@ -20,145 +31,66 @@ function init() {
 
         console.log(data);
         dataHandler.clearCategories();
-        //var sortedData = dataHandler.arrangeData(data['messages']);
-        //console.log(sortedData);
         dataHandler.setMarkerData(data['messages']);
 
         var markerData = dataHandler.getMarkerData();
-        //var timeStamp = parseInt(markerData[0].createddate.replace("/Date(", "").replace(")/",""), 10);
-        //console.log(timeStamp);
         dataCategories = dataHandler.populateCategoryArrays(markerData);
 
         selectList.addEventListener('change', function (e) {
 
-            renderer.trafficMessageList.textContent = '';
+            //renderer.trafficMessageList.textContent = '';
+            var listenerHandle = markerRenderer.getListenerHandle();
+            if (listenerHandle) google.maps.event.removeListener(listenerHandle);
+            markerRenderer.clearMarkers();
+            markerRenderer.bindMarkersToList(ul);
 
             // 1. Clear array.
             switch (e.target.options.selectedIndex) {
 
                 case 0:
-                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataCategories.roadData);
+                    //if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
+                    //renderer.createMarkers(dataCategories.roadData);
+
+                    markerRenderer.createMarkers(map, dataCategories.roadData, ul);
                     break;
 
                 case 1:
-                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataCategories.publicTransData);
+                    //if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
+                    //renderer.createMarkers(dataCategories.publicTransData);
+
+                    markerRenderer.createMarkers(map, dataCategories.publicTransData, ul);
                     break;
 
                 case 2:
-                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataCategories.disruptionData);
+                    //if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
+                    //renderer.createMarkers(dataCategories.disruptionData);
+
+                    markerRenderer.createMarkers(map, dataCategories.disruptionData, ul);
                     break;
 
                 case 3:
-                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataCategories.other);
+                    //if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
+                    //renderer.createMarkers(dataCategories.other);
+
+                    markerRenderer.createMarkers(map, dataCategories.other, ul);
                     break;
 
                 case 4:
-                    if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                    renderer.createMarkers(dataCategories.markerData);
+                    //if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
+                    //renderer.createMarkers(dataCategories.markerData);
+
+                    markerRenderer.createMarkers(map, dataCategories.markerData, ul);
                     break;
             }
         }, false);
 
         if (isFirstLoad) {
 
-            renderer.createMarkers(dataCategories.markerData);
+            //renderer.createMarkers(dataCategories.markerData);
+            markerRenderer.clearMarkers();
+            markerRenderer.bindMarkersToList(ul);
+            markerRenderer.createMarkers(map, dataCategories.markerData, ul);
             isFirstLoad = false;
         };
     });
-
-
-    var map;
-    var renderer = {
-
-        markers: [],
-        trafficMessageList: document.querySelector('#traffic-message-list'),
-        listenerHandle: null,
-
-        createMarkers: function (markerData) {
-
-            // Clear markers - break out.
-            renderer.markers.forEach(function (listMarkerObj) {
-                listMarkerObj.marker.setMap(null);
-            });
-            renderer.markers = [];
-
-            renderer.listenerHandle = google.maps.event.addDomListener(ul, 'click', listMarkerEventCallback);
-
-            var prevClickedMarker;
-            markerData.forEach(function (markerObj, i) {
-
-// Break out the creation part - START HERE
-                var infoMarkup = new infoWindowContent(markerObj);
-                var markup = infoMarkup.getInfoMarkup();
-
-                var markerCoordinate = new google.maps.LatLng(markerObj.latitude, markerObj.longitude);
-                var marker = new google.maps.Marker({
-                    position: markerCoordinate,
-                    map: map,
-                    title: markerObj.title,
-                    infoWindow: new google.maps.InfoWindow({
-                        content: markup
-                    })
-                });
-// CREATION ENDS HERE
-
-                var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
-
-
-                var listMarkerObj = {
-                    marker: marker,
-                    li: li
-                };
-                renderer.markers.push(listMarkerObj);
-
-                google.maps.event.addListener(marker, 'click', function () {
-
-                    if (prevClickedMarker) {
-
-                        prevClickedMarker.infoWindow.close();
-                    }
-
-                    map.setZoom(6);
-                    map.setCenter(markerCoordinate);
-                    marker.infoWindow.open(map, marker);
-
-                    prevClickedMarker = marker;
-
-                });
-            });
-        }
-    };
-
-
-    // var accuracy = pos.coords.accuracy;
-    var latlng = new google.maps.LatLng(56.66282, 16.35524);
-    var mapOptions = {
-        zoom: 4,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    var mapHolder = document.querySelector('#map');
-    map = new google.maps.Map(mapHolder, mapOptions);
-
-    var listMarkerEventCallback = function(e) {
-
-        // Prevent a href action to be called.
-        e.preventDefault();
-        var target = e.target,
-            nodeName = target.nodeName.toLocaleLowerCase();
-
-        if (nodeName !== 'a') {
-
-            return;
-        };
-
-        var marker = renderer.markers[target.id].marker;
-        google.maps.event.trigger(marker, 'click');
-        //google.maps.event.trigger(marker, 'click');
-    };
 }

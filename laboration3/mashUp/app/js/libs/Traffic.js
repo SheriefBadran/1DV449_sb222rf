@@ -35,6 +35,7 @@ TRAFFIC.namespace('google.maps.markerRenderer');
 TRAFFIC.namespace('google.maps.mapRenderer');
 
 TRAFFIC.dom.listRenderer = (function () {
+    'use strict';
 
     // private properties. Creating elements is a one time procedure.
     var doc = document,
@@ -69,6 +70,7 @@ TRAFFIC.dom.listRenderer = (function () {
 }());
 
 TRAFFIC.data.dataHandler = (function () {
+    'use strict';
 
     var dataCategories = {
         markers: [],
@@ -83,12 +85,15 @@ TRAFFIC.data.dataHandler = (function () {
 
         var seen = {};
         return array.filter(function(item) {
+
             return seen.hasOwnProperty(item.title) ? false : (seen[item.title] = true);
         });
     }
 
     // Private method.
     var getRelevantArray = function (dataArray) {
+
+
 
         dataArray.forEach(function(message) {
 
@@ -102,7 +107,9 @@ TRAFFIC.data.dataHandler = (function () {
 
         dataArray = cleanArrayFromMultiples(dataArray);
 
-        var relevantArray = dataArray.map(function (message, i) {
+        dataArray = dataArray.slice(0, 100);
+
+        return dataArray.map(function (message) {
 
             //console.log(trafficMessage);
             return {
@@ -115,8 +122,6 @@ TRAFFIC.data.dataHandler = (function () {
                 subcategory: message.subcategory
             };
         });
-
-        return relevantArray;
     };
 
     var categorize = function (array) {
@@ -157,11 +162,6 @@ TRAFFIC.data.dataHandler = (function () {
     // public API
     return {
 
-        arrangeData: function (array) {
-
-            return array.reverse().slice(0, 100);
-        },
-
         populateCategoryArrays: function (array) {
 
             return categorize(array);
@@ -179,8 +179,7 @@ TRAFFIC.data.dataHandler = (function () {
                 throw {errMsg: 'markerData has to be an array.'};
             }
 
-            var relevantArray = getRelevantArray(array);
-            dataCategories.markerData = relevantArray;
+            dataCategories.markerData = getRelevantArray(array);
 
         },
         getMarkerData: function () {
@@ -191,6 +190,7 @@ TRAFFIC.data.dataHandler = (function () {
 }());
 
 TRAFFIC.events.listenerCallbacks = (function () {
+    'use strict';
 
     var selectListListener = function (e) {
 
@@ -202,27 +202,27 @@ TRAFFIC.events.listenerCallbacks = (function () {
             case 0:
                 //google.maps.event.removeDomListener(ul, 'click', listMarkerEventCallback);
                 if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataHandler.arrangeData(dataCategories.roadData));
+                renderer.createMarkers(dataCategories.roadData);
                 break;
 
             case 1:
                 if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataHandler.arrangeData(dataCategories.publicTransData));
+                renderer.createMarkers(dataCategories.publicTransData);
                 break;
 
             case 2:
                 if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataHandler.arrangeData(dataCategories.disruptionData));
+                renderer.createMarkers(dataCategories.disruptionData);
                 break;
 
             case 3:
                 if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataHandler.arrangeData(dataCategories.other));
+                renderer.createMarkers(dataCategories.other);
                 break;
 
             case 4:
                 if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataHandler.arrangeData(dataCategories.markerData));
+                renderer.createMarkers(dataCategories.markerData);
                 break;
         }
     };
@@ -237,6 +237,7 @@ TRAFFIC.events.listenerCallbacks = (function () {
 }());
 
 TRAFFIC.google.events = (function () {
+    'use strict';
 
     // private properties. Creating elements is a one time procedure.
     var doc = document,
@@ -272,23 +273,21 @@ TRAFFIC.google.events = (function () {
 }());
 
 TRAFFIC.google.maps.mapRenderer = (function () {
+    'use strict';
 
-    // private property
     var map;
-
     // private methods
-    function displayMap(centerCoordinate, mapOptions, mapWrapper) {
+    function renderMap(centerCoordinate, mapOptions, mapWrapper) {
 
-        // var accuracy = pos.coords.accuracy;
-        var latlng = new google.maps.LatLng(centerCoordinate.latitude, centerCoordinate.longitude);
+        mapOptions.center = new google.maps.LatLng(centerCoordinate.latitude, centerCoordinate.longitude);
         map = new google.maps.Map(mapWrapper, mapOptions);
     };
 
     // public API
     return {
-        displayGoogleMap: function (centerCoordinate, mapOptions, mapWrapper) {
+        renderGoogleMap: function (centerCoordinate, mapOptions, mapWrapper) {
 
-            displayMap(centerCoordinate, mapOptions, mapWrapper);
+            renderMap(centerCoordinate, mapOptions, mapWrapper);
         },
         getMap: function () {
 
@@ -299,5 +298,114 @@ TRAFFIC.google.maps.mapRenderer = (function () {
 
 TRAFFIC.google.maps.markerRenderer = (function () {
 
-    return {};
+    // Dependencies
+    var listHandler = TRAFFIC.dom.listRenderer;
+    //var map = TRAFFIC.google.maps.mapRenderer;
+    //var ul = document.querySelector('#traffic-message-list');
+
+    var renderer = {
+
+        markers: [],
+        trafficMessageList: document.querySelector('#traffic-message-list'),
+        listenerHandle: null
+    };
+
+    var prevClickedMarker;
+
+    var listMarkerEventCallback = function(e) {
+
+        // Prevent a href action to be called.
+        e.preventDefault();
+        var target = e.target,
+            nodeName = target.nodeName.toLowerCase();
+
+        if (nodeName !== 'a') {
+
+            return;
+        }
+
+        var marker = renderer.markers[target.id].marker;
+        google.maps.event.trigger(marker, 'click');
+        //google.maps.event.trigger(marker, 'click');
+    };
+
+    var clearMarkers = function () {
+
+        renderer.markers.forEach(function (listMarkerObj) {
+            listMarkerObj.marker.setMap(null);
+        });
+        renderer.markers = [];
+    };
+
+    var bindMarkersToList = function (ul) {
+
+        renderer.listenerHandle = google.maps.event.addDomListener(ul, 'click', listMarkerEventCallback);
+    };
+
+    var createMarkers = function (map, markerData, ul) {
+
+        // Clear list before new rendering of new list and markers.
+        ul.textContent = '';
+        markerData.forEach(function (markerObj, i) {
+
+            // Break out the creation part - START HERE
+            var infoMarkup = new infoWindowContent(markerObj);
+            var markup = infoMarkup.getInfoMarkup();
+
+            var markerCoordinate = new google.maps.LatLng(markerObj.latitude, markerObj.longitude);
+            var marker = new google.maps.Marker({
+                position: markerCoordinate,
+                map: map,
+                title: markerObj.title,
+                infoWindow: new google.maps.InfoWindow({
+                    content: markup
+                })
+            });
+            // CREATION ENDS HERE
+
+            var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
+            var listMarkerObj = {
+                marker: marker,
+                li: li
+            };
+
+            renderer.markers.push(listMarkerObj);
+
+            google.maps.event.addListener(marker, 'click', function () {
+
+                if (prevClickedMarker) {
+
+                    prevClickedMarker.infoWindow.close();
+                }
+
+                map.setZoom(6);
+                map.setCenter(markerCoordinate);
+                marker.infoWindow.open(map, marker);
+
+                prevClickedMarker = marker;
+
+            });
+        });
+    };
+    return {
+        getListenerHandle: function () {
+
+            return renderer.listenerHandle;
+        },
+
+        clearMarkers: function () {
+
+            clearMarkers();
+        },
+
+        bindMarkersToList: function (ul) {
+
+            bindMarkersToList(ul);
+        },
+
+        createMarkers: function (map, markerData, ul) {
+
+            createMarkers(map, markerData, ul);
+        }
+    };
 }());

@@ -4,22 +4,57 @@ body, html {
     /*overflow: auto;*/
 }
 
-/*#main{*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-/*}*/
+header {
+    background-color: #ccff90;
+    opacity: 0.6;
+}
 
-/*#map{*/
-    /*width: 450px;*/
-    /*height: 400px;*/
-    /*float: left;*/
-/*}*/
+#side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #ccff90;
+    height: 500px;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+#side-bar-list ul li {
+
+    padding: 10px;
+}
+
+#side-bar-list ul li a {
+
+    color: #000;
+}
+
+#select-list {
+    background-color: #4a148c;
+    border: 1px solid #4a148c;
+}
+
+#side-bar-list {
+    flex-grow: 1;
+    overflow-y: scroll;
+    height: 490px;
+    /*max-height: 500px;*/
+}
+
+#select-list select {
+    /*font-size: 3em;*/
+}
+
+#side-bar li a {
+    color: #fff;
+}
 
 #map{
-    /*width: 50%;*/
     height: 500px;
-    /*float: left;*/
+}
 
+ul {
+    padding: 0;
+    list-style-type: none;
 }
 
 /*#select-list{*/
