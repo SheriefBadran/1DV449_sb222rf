@@ -37,7 +37,7 @@ var server = app.listen(port, ipaddr, function () {
 var sanitize = function (string) {
 
     return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
+};
 
 var io = require('socket.io').listen(server);
 
@@ -91,42 +91,3 @@ io.sockets.on('connection', function (client) {
 
     client.emit('load', parse);
 });
-
-
-// Get a list of all messages
-//app.get('/traffic-events', function(req, res) {
-//
-//    //fs.createReadStream('traffic.json').pipe(request.put('http://api.sr.se/api/v2/traffic/messages?format=json&indent=true'));
-//
-//    //var destFile = fs.createWriteStream('traffic.json');
-//    //var jsonString = JSON.stringify(request.get('http://api.sr.se/api/v2/traffic/messages?format=json&indent=true'), null, 4);
-//    //fs.createReadStream(jsonString).pipe(destFile);
-//    //
-//    //fs.writeFile()
-//
-//
-//    //console.log(request.get('http://api.sr.se/api/v2/traffic/messages?format=json&indent=true'));
-//
-//    request('http://api.sr.se/api/v2/traffic/messages?format=json&indent=true&size=1000', function (error, response, body) {
-//
-//        if (!error && response.statusCode == 200) {
-//
-//            fs.writeFile('traffic.json', body);
-//            //console.log(typeof body);
-//            //console.log(JSON.parse(body));
-//            res.send(JSON.parse(body));
-//        }
-//        else {
-//            //console.log('error');
-//            res.send('error');
-//        }
-//    });
-//
-//});
-
-//app.get('/development', function(req, res) {
-//
-//    res.send(JSON.parse(fs.readFileSync('traffic.json')));
-//});
-//http://api.sr.se/api/v2/programs?format=json&indent=false&page=2
-//http://api.sr.se/api/v2/traffic/messages?format=json&indent=true;

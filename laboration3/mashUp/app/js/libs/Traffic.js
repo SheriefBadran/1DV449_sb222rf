@@ -189,89 +189,6 @@ TRAFFIC.data.dataHandler = (function () {
     };
 }());
 
-TRAFFIC.events.listenerCallbacks = (function () {
-    'use strict';
-
-    var selectListListener = function (e) {
-
-        renderer.trafficMessageList.textContent = '';
-
-        // 1. Clear array.
-        switch (e.target.options.selectedIndex) {
-
-            case 0:
-                //google.maps.event.removeDomListener(ul, 'click', listMarkerEventCallback);
-                if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataCategories.roadData);
-                break;
-
-            case 1:
-                if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataCategories.publicTransData);
-                break;
-
-            case 2:
-                if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataCategories.disruptionData);
-                break;
-
-            case 3:
-                if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataCategories.other);
-                break;
-
-            case 4:
-                if (renderer.listenerHandle)  google.maps.event.removeListener(renderer.listenerHandle);
-                renderer.createMarkers(dataCategories.markerData);
-                break;
-        }
-    };
-
-    // public API
-    return {
-        selectListListener: function () {
-
-            return selectListListener;
-        }
-    };
-}());
-
-TRAFFIC.google.events = (function () {
-    'use strict';
-
-    // private properties. Creating elements is a one time procedure.
-    var doc = document,
-        unitList,
-        liOrigin = doc.createElement('li'),
-        aOrigin = doc.createElement('a');
-
-    aOrigin.setAttribute('href', '');
-    var li,
-        a;
-
-    // Code below is executed each time an li element is rendered.
-    var renderMarkerBindedList = function (marker, bindId) {
-
-        li = liOrigin.cloneNode(true);
-        a = aOrigin.cloneNode(true);
-        a.setAttribute('id', bindId);
-        a.textContent = marker.title;
-        li.appendChild(a);
-        unitList.appendChild(li);
-
-        return li;
-    };
-
-    // public API
-    return {
-        renderMarkerBindedListItems: function (ul, marker, bindId) {
-
-            unitList = ul;
-            return renderMarkerBindedList(marker, bindId);
-        }
-    };
-}());
-
 TRAFFIC.google.maps.mapRenderer = (function () {
     'use strict';
 
@@ -297,11 +214,10 @@ TRAFFIC.google.maps.mapRenderer = (function () {
 }());
 
 TRAFFIC.google.maps.markerRenderer = (function () {
+    'use strict';
 
     // Dependencies
     var listHandler = TRAFFIC.dom.listRenderer;
-    //var map = TRAFFIC.google.maps.mapRenderer;
-    //var ul = document.querySelector('#traffic-message-list');
 
     var renderer = {
 
@@ -326,12 +242,12 @@ TRAFFIC.google.maps.markerRenderer = (function () {
 
         var marker = renderer.markers[target.id].marker;
         google.maps.event.trigger(marker, 'click');
-        //google.maps.event.trigger(marker, 'click');
     };
 
     var clearMarkers = function () {
 
         renderer.markers.forEach(function (listMarkerObj) {
+
             listMarkerObj.marker.setMap(null);
         });
         renderer.markers = [];
@@ -393,7 +309,7 @@ TRAFFIC.google.maps.markerRenderer = (function () {
             return renderer.listenerHandle;
         },
 
-        clearMarkers: function () {
+        clearPreviousMarkers: function () {
 
             clearMarkers();
         },
