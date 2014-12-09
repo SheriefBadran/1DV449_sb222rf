@@ -21,5 +21,5 @@ Mitt data cashas på serversidan. Servern gör en request till SR och tar imot d
  * Jag har svårt att se någon annan uppenbar risk eftersom jag försökt försvåra xss attacker (skadliga script som       eventuellt skulle kunna komma från sr), dessutom låter jag inte    användaren mata in någon input till   applikationen.
  
 ### Hur har du tänkt kring säkerheten i din applikation?
- * All data som läggs in i html noder läggs in som text med hjälp av Node.textContent(). Detta förhindrar XSS attackvektorer.
- * 
+ * All data som läggs in i html noder för trafikmeddelandelistan läggs in som text med hjälp av Node.textContent().     Detta förhindrar XSS attackvektorer.
+ * Data som kommer ifrån SR och ska skrivas ut i Google Maps infoWindow körs genom en sanitize metod som strippar       bort "<" och ">".
