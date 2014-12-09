@@ -288,20 +288,20 @@ TRAFFIC.google.maps.markerRenderer = (function () {
 
     var createMarkers = function (map, markerData, ul) {
 
-        // Clear list before new rendering of new list and markers.
         ul.textContent = '';
+        // Create infoWindow before loop, then reference it inside.
+        var infoWindow = new google.maps.InfoWindow();
         markerData.forEach(function (markerObj, i) {
             
             var markup = infoMarkup.getInfoMarkup(markerObj);
+
 
             var markerCoordinate = new google.maps.LatLng(markerObj.latitude, markerObj.longitude);
             var marker = new google.maps.Marker({
                 position: markerCoordinate,
                 map: map,
                 title: markerObj.title,
-                infoWindow: new google.maps.InfoWindow({
-                    content: markup
-                })
+                infoWindow: infoWindow
             });
 
             var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
@@ -321,6 +321,7 @@ TRAFFIC.google.maps.markerRenderer = (function () {
 
                 map.setZoom(6);
                 map.setCenter(markerCoordinate);
+                infoWindow.setContent(markup);
                 marker.infoWindow.open(map, marker);
 
                 prevClickedMarker = marker;

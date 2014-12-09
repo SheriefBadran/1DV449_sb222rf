@@ -33,12 +33,6 @@ var server = app.listen(port, ipaddr, function () {
         port, app.settings.env);
 });
 
-
-var sanitize = function (string) {
-
-    return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-};
-
 var io = require('socket.io').listen(server);
 
 var parse = JSON.parse("{}");
