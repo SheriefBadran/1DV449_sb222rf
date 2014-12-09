@@ -33,6 +33,7 @@ TRAFFIC.namespace('google.events');
 TRAFFIC.namespace('data.dataHandler');
 TRAFFIC.namespace('google.maps.markerRenderer');
 TRAFFIC.namespace('google.maps.mapRenderer');
+TRAFFIC.namespace('google.maps.infoWindowContent');
 
 TRAFFIC.dom.listRenderer = (function () {
     'use strict';
@@ -213,11 +214,38 @@ TRAFFIC.google.maps.mapRenderer = (function () {
     };
 }());
 
+TRAFFIC.google.maps.infoWindowContent = (function () {
+
+    var sanitize = function (string) {
+
+        return string.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    };
+
+   return {
+
+       getInfoMarkup: function (markerObj) {
+
+           var title = markerObj.title == '' ? 'Titel saknas' : sanitize(markerObj.title);
+           var date = new Date(markerObj.createddate);
+           var description = markerObj.description == '' ? 'Beskrivning saknas.' : sanitize(markerObj.description);
+           var subCategory = markerObj.subcategory == '' ? 'Underkategori saknas.' : sanitize(markerObj.subcategory);
+
+           var HTML = "<div>";
+           HTML+=  "<h4>" + title + " - " + subCategory + "</h4>";
+           HTML+=  "<p>" + description + "</p>";
+           HTML+=  "<p>" + sanitize(date.toLocaleDateString()) + " : " + sanitize(date.toLocaleTimeString()) + "</p>";
+
+           return HTML;
+       }
+   };
+}());
+
 TRAFFIC.google.maps.markerRenderer = (function () {
     'use strict';
 
     // Dependencies
     var listHandler = TRAFFIC.dom.listRenderer;
+    var infoMarkup = TRAFFIC.google.maps.infoWindowContent;
 
     var renderer = {
 
@@ -263,10 +291,8 @@ TRAFFIC.google.maps.markerRenderer = (function () {
         // Clear list before new rendering of new list and markers.
         ul.textContent = '';
         markerData.forEach(function (markerObj, i) {
-
-            // Break out the creation part - START HERE
-            var infoMarkup = new infoWindowContent(markerObj);
-            var markup = infoMarkup.getInfoMarkup();
+            
+            var markup = infoMarkup.getInfoMarkup(markerObj);
 
             var markerCoordinate = new google.maps.LatLng(markerObj.latitude, markerObj.longitude);
             var marker = new google.maps.Marker({
@@ -277,7 +303,6 @@ TRAFFIC.google.maps.markerRenderer = (function () {
                     content: markup
                 })
             });
-            // CREATION ENDS HERE
 
             var li = listHandler.renderMarkerBindedListItems(ul, marker, i);
             var listMarkerObj = {
