@@ -18,4 +18,8 @@ Mitt data cashas på serversidan. Servern gör en request till SR och tar imot d
 
 ### Vad finns det för risker med din applikation?
  * Om SR's api går ner, gör jag varken åtgärder eller visar en felsida för användaren. Användaren skulle då endast se    en tom karta. Denna typ av risk antar jag är i princip obefintlig vad beträffar Google Maps API. 
+ * Jag har svårt att se någon annan uppenbar risk eftersom jag försökt försvåra xss attacker (skadliga script som       eventuellt skulle kunna komma från sr), dessutom låter jag inte    användaren mata in någon input till   applikationen.
+ 
+### Hur har du tänkt kring säkerheten i din applikation?
+ * All data som läggs in i html noder läggs in som text med hjälp av Node.textContent(). Detta förhindrar XSS attackvektorer.
  * 
