@@ -1226,18 +1226,6 @@
       "subcategory": "Trafikstörning"
     },
     {
-      "id": 1307077,
-      "priority": 2,
-      "createddate": "\/Date(1418138555567+0100)\/",
-      "title": "E10 Gällivare-Skaulo",
-      "exactlocation": "Vid Moskojärvi",
-      "description": "Tillfälligt stopp i båda riktningarna. Bärgningsarbete.",
-      "latitude": 67.38105107706177,
-      "longitude": 21.078097424459735,
-      "category": 0,
-      "subcategory": "Trafikstörning"
-    },
-    {
       "id": 1307416,
       "priority": 3,
       "createddate": "\/Date(1418138688263+0100)\/",
@@ -1356,18 +1344,6 @@
       "longitude": 15.115683025083134,
       "category": 1,
       "subcategory": "Tåg"
-    },
-    {
-      "id": 1307515,
-      "priority": 3,
-      "createddate": "\/Date(1418143693717+0100)\/",
-      "title": "E6-Hamburgsund",
-      "exactlocation": "Några kilometer in på lv163",
-      "description": "Trafktor har gått av vägen.",
-      "latitude": 58.55460886577805,
-      "longitude": 11.453376618886841,
-      "category": 0,
-      "subcategory": "Trafikolycka"
     },
     {
       "id": 1263776,
@@ -1706,30 +1682,6 @@
       "subcategory": "Flyg"
     },
     {
-      "id": 1307533,
-      "priority": 3,
-      "createddate": "\/Date(1418145888950+0100)\/",
-      "title": "Rv 44 Lidköping-Liden",
-      "exactlocation": "I höjd med Röslätt",
-      "description": "Begränsad framkomlighet. Brand i lastbil.",
-      "latitude": 58.458705902099609,
-      "longitude": 13.011658668518066,
-      "category": 0,
-      "subcategory": "Trafikstörning"
-    },
-    {
-      "id": 1307541,
-      "priority": 3,
-      "createddate": "\/Date(1418146995297+0100)\/",
-      "title": "E4/E20 Södertäljevägen ",
-      "exactlocation": "Mot Södertälje vid Morabergs trfpl",
-      "description": "Personbil i vänster körfält.",
-      "latitude": 59.205780029296875,
-      "longitude": 17.683820724487305,
-      "category": 0,
-      "subcategory": "Trafikstörning"
-    },
-    {
       "id": 1307540,
       "priority": 3,
       "createddate": "\/Date(1418149335923+0100)\/",
@@ -1742,22 +1694,22 @@
       "subcategory": "Vägarbete"
     },
     {
-      "id": 1307527,
+      "id": 1307077,
       "priority": 2,
-      "createddate": "\/Date(1418153327210+0100)\/",
-      "title": "E4 Gävle-Hagsta",
-      "exactlocation": "Mellan Gävle norra och Testeboån",
-      "description": "Åter öppet.",
-      "latitude": 60.790996551513672,
-      "longitude": 17.081710815429688,
+      "createddate": "\/Date(1418155082383+0100)\/",
+      "title": "E10 Gällivare-Skaulo",
+      "exactlocation": "Vid Moskojärvi",
+      "description": "Tillfälligt stopp i båda riktningarna. Bärgningsarbete. Växelvis trafik.",
+      "latitude": 67.38105107706177,
+      "longitude": 21.078097424459735,
       "category": 0,
-      "subcategory": "Trafikolycka"
+      "subcategory": "Trafikstörning"
     }
   ],
   "pagination": {
     "page": 1,
     "size": 1000,
-    "totalhits": 146,
+    "totalhits": 142,
     "totalpages": 1
   }
 }
