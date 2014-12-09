@@ -17,7 +17,8 @@ Det borde räcka att anropa SR's API var 5:e minut. Vad beträffar Google Maps r
 Mitt data cachas på serversidan. Servern gör en request till SR och tar imot data i json format, som sedan skrivs till fil. Det cachade datat används på klientsidan tills att servern upptäcker att det finns ny data att pusha till klienten. Kommunikation mellan server och klient sker via web sockets (socket.io).
 
 ### Vad finns det för risker med din applikation?
- * Om SR's api går ner, gör jag varken åtgärder eller visar en felsida för användaren. Användaren skulle då endast se    en tom karta. Denna typ av risk antar jag är i princip obefintlig vad beträffar Google Maps API. 
+ * Om SR's api går ner, gör jag varken åtgärder eller visar en felsida för användaren. Användaren skulle då endast se    en tom karta. Denna typ av risk antar jag är i princip obefintlig vad beträffar Google Maps API.
+ * Om SR svarar med ogiltig JSON då användaren besöker applikationen första gången kommer användaren att mötas av en tom karta. Om användaren redan fått en karta med markers samt en lista med trafikmeddelanden och SR efter det svarar servern med ogiltig JSON, kommer användaren att kunna fortsätta använda applikationen fast utan uppdaterad data fram till att nästa omgång med ny data pushas från server till klient.
  * Jag har svårt att se någon annan uppenbar risk eftersom jag försökt försvåra xss attacker (skadliga script som       eventuellt skulle kunna komma från sr), dessutom låter jag inte    användaren mata in någon input till   applikationen.
  
 ### Hur har du tänkt kring säkerheten i din applikation?
@@ -39,3 +40,5 @@ Mitt data cachas på serversidan. Servern gör en request till SR och tar imot d
 * Som redan nämnts försöker jag att hålla så mycket arbete som möjligt utanför looparna. I modulen   TRAFFIC.google.maps.markerRenderer skapar jag exempelvis en enda instans av infoWindow. Sedan refererar jag till denna instans ifrån loopen där jag skapar och renderar markers.
 * Servern pushar data till klienten endast då det finns ny data att presentera.
 
+### Övrigt
+Applikationen fungerar även om man stänger ner internetanslutning och/eller node server.
