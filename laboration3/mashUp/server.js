@@ -3,9 +3,6 @@
 var application_root = __dirname,
     request = require('request'),
     express = require('express'), //Web framework
-    morgan = require('morgan'), // (since Express 4.0.0)
-    bodyParser = require('body-parser'), // (since Express 4.0.0)
-    errorHandler = require('errorhandler'), // (since Express 4.0.0)
     path = require('path'), // Utilities for dealing with file paths
     fs = require('fs'),
     app = express();
@@ -16,9 +13,6 @@ var env = process.env.NODE_ENV || 'development';
 if ('development' == env) {
 
     app.use('/', express.static(path.join(application_root, 'app')));
-    app.use(morgan('dev'));
-    app.use(bodyParser());
-    app.use(errorHandler({dumpExceptions: true, showStack: true}));
 };
 
 //Start server
@@ -50,7 +44,7 @@ var getTrafficEvents = function () {
 
     request('http://api.sr.se/api/v2/traffic/messages?format=json&indent=true&size=1000', function (error, response, body) {
 
-        if (!error && response.statusCode == 200) {
+        if (response && !error && response.statusCode == 200) {
             var jsonData = JSON.parse(body);
             if (JSON.stringify(parse) !== JSON.stringify(jsonData)) {
 
